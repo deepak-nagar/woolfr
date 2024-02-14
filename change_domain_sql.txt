@@ -1,0 +1,25 @@
+UPDATE `users` SET lowPhotoUrl = replace(lowPhotoUrl, 'datingnet.xyz', 'dating.raccoonsquare.com');
+UPDATE `users` SET originPhotoUrl = replace(originPhotoUrl, 'datingnet.xyz', 'dating.raccoonsquare.com');
+UPDATE `users` SET normalPhotoUrl = replace(normalPhotoUrl, 'datingnet.xyz', 'dating.raccoonsquare.com');
+UPDATE `users` SET bigPhotoUrl = replace(bigPhotoUrl, 'datingnet.xyz', 'dating.raccoonsquare.com');
+UPDATE `users` SET originCoverUrl = replace(originCoverUrl, 'datingnet.xyz', 'dating.raccoonsquare.com');
+UPDATE `users` SET normalCoverUrl = replace(normalCoverUrl, 'datingnet.xyz', 'dating.raccoonsquare.com');
+UPDATE `users` SET photoModerateUrl = replace(photoModerateUrl, 'datingnet.xyz', 'dating.raccoonsquare.com');
+UPDATE `users` SET coverModerateUrl = replace(coverModerateUrl, 'datingnet.xyz', 'dating.raccoonsquare.com');
+
+
+UPDATE `photos` SET originImgUrl = replace(originImgUrl, 'datingnet.xyz', 'dating.raccoonsquare.com');
+UPDATE `photos` SET previewImgUrl = replace(previewImgUrl, 'datingnet.xyz', 'dating.raccoonsquare.com');
+UPDATE `photos` SET imgUrl = replace(imgUrl, 'datingnet.xyz', 'dating.raccoonsquare.com');
+UPDATE `photos` SET previewVideoImgUrl = replace(previewVideoImgUrl, 'datingnet.xyz', 'dating.raccoonsquare.com');
+UPDATE `photos` SET videoUrl = replace(	videoUrl, 'datingnet.xyz', 'dating.raccoonsquare.com');
+
+
+UPDATE `messages` SET imgUrl = replace(imgUrl, 'datingnet.xyz', 'dating.raccoonsquare.com');
+UPDATE `messages` SET stickerImgUrl = replace(stickerImgUrl, 'datingnet.xyz', 'dating.raccoonsquare.com');
+
+UPDATE `gifts_data` SET imgUrl = replace(imgUrl, 'datingnet.xyz', 'dating.raccoonsquare.com');
+UPDATE `stickers_data` SET imgUrl = replace(imgUrl, 'datingnet.xyz', 'dating.raccoonsquare.com');
+UPDATE `feelings_data` SET imgUrl = replace(imgUrl, 'datingnet.xyz', 'dating.raccoonsquare.com');
+
+UPDATE `gifts` SET imgUrl = replace(imgUrl, 'datingnet.xyz', 'dating.raccoonsquare.com');

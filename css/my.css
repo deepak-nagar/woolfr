@@ -1,0 +1,104 @@
+.messages_counter {
+    float: right;
+    background: #00AFF0;
+    border-radius: 3px;
+    padding: 1px;
+    padding-right: 3px;
+    padding-left: 3px;
+    color: #fff;
+    margin: 5px;
+}
+
+.box-body {
+    background-color: #FFF;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    line-height: 140%;
+    display: block;
+    padding: 10px;
+}
+
+.box-body .prompt_header {
+    padding: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;;
+}
+
+.box-body .choice {
+    padding: 0 0 0px;
+    height: 28px;
+}
+
+.box-body .button_register {
+    width: 175px;
+    float: left;
+    display: block;
+}
+
+.box-body .button_login {
+    width: 175px;
+    float: right;
+    display: block;
+}
+
+.box-footer {
+
+    border: 1px solid #999;
+    border-top: 0;
+    display: block;
+}
+
+.box-footer .controls {
+
+    padding: 8px 5px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #dae1e8;
+}
+
+.box-footer .controls button {
+
+    font-size: 11px;
+    margin-left: 5px;
+}
+
+.box-footer .controls button {
+
+    font-size: 11px;
+    margin-left: 5px;
+}
+
+.box-menu-item {
+
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    color: var(--side_menu_text_color);
+    font-weight: bold;
+    font-size: 11px;
+    padding-left: 20px;
+    text-decoration:none
+}
+
+.box-menu-item:hover{
+
+    background-color: var(--side_menu_li_hover);
+    color: var(--side_menu_text_color_hover);
+    text-decoration:none
+}
+
+.access-mode-show-on-stream, .access-mode-not-show-on-stream {
+
+    cursor: pointer;
+}
+
+.new-post-form-container {
+
+}
+
+.new-post-form-container .card-subtitle {
+
+    font-weight: normal;
+    font-size: 13px;
+    color: #F76D9B;
+}
