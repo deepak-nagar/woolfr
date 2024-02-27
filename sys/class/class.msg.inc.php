@@ -1156,4 +1156,35 @@ class msg extends db_connect
 
         return $response;
     }
+
+    public function deletePhrase($phraseId)
+{
+    $result = array("error" => true,
+                    "error_code" => ERROR_UNKNOWN);
+
+    // Prepare the SQL statement to delete the phrase with the given ID
+    $stmt = $this->db->prepare("DELETE FROM messages_phrases WHERE id = (:phraseId)");
+
+    // Bind the phrase ID parameter
+    $stmt->bindParam(':phraseId', $phraseId, PDO::PARAM_STR);
+
+    // Execute the statement
+    if ($stmt->execute()) {
+
+        // Check if the statement was successful and a row was deleted
+        if ($stmt->rowCount() > 0) {
+
+            $result = array("error" => false,
+                            "error_code" => ERROR_SUCCESS);
+        } else {
+
+            // No rows were deleted, possibly because the phraseId didn't exist
+            $result = array("error" => true,
+                            "error_code" => ERROR_UNKNOWN);
+        }
+    }
+
+    return $result;
+}
+
 }

@@ -86,19 +86,19 @@ class account extends db_connect
             return $result;
         }
 
-        if ($sex < 0 || $sex > 2) {
+        // if ($sex < 0 || $sex > 2) {
 
-            // 0 = male
-            // 1= female
-            // 2= secret
+        //     // 0 = male
+        //     // 1= female
+        //     // 2= secret
 
-            $sex = 2; // Default gender. 2 = secret
-        }
+        //     $sex = 2; // Default gender. 2 = secret
+        // }
 
-        if ($u_sex_orientation > 4 || $u_sex_orientation < 1) {
+        // if ($u_sex_orientation > 4 || $u_sex_orientation < 1) {
 
-            $u_sex_orientation = 1; // Default sex orientation. 1 = Heterosexual
-        }
+        //     $u_sex_orientation = 1; // Default sex orientation. 1 = Heterosexual
+        // }
 
         if ($u_age > 110 || $u_age < 18) {
 

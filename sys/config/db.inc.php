@@ -75,9 +75,13 @@ $B['FACEBOOK_APP_ID'] = "2343245345345";
 $B['FACEBOOK_APP_SECRET'] = "cb83c2a1daa557f9b62f319bfd61c9e055";
 
 // Recaptcha settings | Create you keys for reCAPTCHA v3 | https://www.google.com/recaptcha/admin/create
+//woorlf.com
+$B['RECAPTCHA_SITE_KEY'] = "6Ldi_XIpAAAAABrufZgb2yNk1G8Blpbd622eY1HH";
+$B['RECAPTCHA_SECRET_KEY'] = "6Ldi_XIpAAAAABoJDZq6QaTsoSyObV_tNL9W7IpN";
+//localhost
+// $B['RECAPTCHA_SITE_KEY'] = "6LcTWHIpAAAAAC6Xyxu33uk8Uq_Glp_7A0U0MSEl";
+// $B['RECAPTCHA_SECRET_KEY'] = "6LcTWHIpAAAAAIMV44ZBxfwYcKhlDPmZHCiSPIph";
 
-$B['RECAPTCHA_SITE_KEY'] = "6LcTWHIpAAAAAC6Xyxu33uk8Uq_Glp_7A0U0MSEl";
-$B['RECAPTCHA_SECRET_KEY'] = "6LcTWHIpAAAAAIMV44ZBxfwYcKhlDPmZHCiSPIph";
 
 // SMTP Settings | For password recovery
 

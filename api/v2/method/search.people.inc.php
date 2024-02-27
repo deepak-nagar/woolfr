@@ -15,7 +15,7 @@ if (!empty($_POST)) {
     $query = isset($_POST['query']) ? $_POST['query'] : '';
     $itemId = isset($_POST['itemId']) ? $_POST['itemId'] : 0;
 
-    $gender = isset($_POST['gender']) ? $_POST['gender'] : -3;
+    $gender = isset($_POST['gender']) ? $_POST['gender'] : 0;
     $online = isset($_POST['online']) ? $_POST['online'] : 0;
     $photo = isset($_POST['photo']) ? $_POST['photo'] : 0;
     $proMode = isset($_POST['pro']) ? $_POST['pro'] : 0;

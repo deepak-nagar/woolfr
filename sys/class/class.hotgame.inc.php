@@ -27,7 +27,7 @@ class hotgame extends db_connect
         return $number_of_rows = $stmt->fetchColumn();
     }
 
-    public function get($itemId, $lat, $lng, $distance = 1000, $sex = 2, $sexOrientation = 0, $liked = 1, $matches = 1)
+    public function get($itemId, $lat, $lng, $distance = 1000, $sex = 6, $sexOrientation = 0, $liked = 1, $matches = 1)
     {
         $result = array(
             "error" => false,
@@ -46,7 +46,7 @@ class hotgame extends db_connect
         $origLon = $lng;
         $dist = $distance; // This is the maximum distance (in miles) away from $origLat, $origLon in which to search
 
-        if ($sex == 3) {
+        if ($sex == 6) {
 
             $sex_sql = "";
 

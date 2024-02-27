@@ -20,13 +20,13 @@ class find extends db_connect
         parent::__construct($dbo);
     }
 
-    private function getCount($queryText, $gender = 3, $online = 0, $photo = 0, $proMode = 0, $ageFrom = 18, $ageTo = 105, $sexOrientation = 0)
+    private function getCount($queryText, $gender = 6, $online = 0, $photo = 0, $proMode = 0, $ageFrom = 18, $ageTo = 105, $sexOrientation = 0)
     {
         $queryText = "%".$queryText."%";
 
         $genderSql = "";
 
-        if ($gender != 3) {
+        if ($gender != 6) {
 
             $genderSql = " AND sex = {$gender}";
         }
@@ -79,7 +79,7 @@ class find extends db_connect
         return $number_of_rows = $stmt->fetchColumn() + 1;
     }
 
-    public function query($queryText = '', $itemId = 0, $gender = 3, $online = 0, $photo = 0, $proMode = 0, $ageFrom = 18, $ageTo = 105, $sexOrientation = 0)
+    public function query($queryText = '', $itemId = 0, $gender = 6, $online = 0, $photo = 0, $proMode = 0, $ageFrom = 18, $ageTo = 105, $sexOrientation = 0)
     {
         $originQuery = $queryText;
 
@@ -93,7 +93,7 @@ class find extends db_connect
 
         $genderSql = "";
 
-        if ($gender != 3) {
+        if ($gender != 6) {
 
             $genderSql = " AND sex = {$gender}";
         }
@@ -163,7 +163,7 @@ class find extends db_connect
         return $users;
     }
 
-    public function preload($itemId = 0, $gender = 3, $online = 0, $photo = 0, $proMode = 0, $ageFrom = 18, $ageTo = 105, $sexOrientation = 0)
+    public function preload($itemId = 0, $gender = 6, $online = 0, $photo = 0, $proMode = 0, $ageFrom = 18, $ageTo = 105, $sexOrientation = 0)
     {
         if ($itemId == 0) {
 
@@ -175,7 +175,7 @@ class find extends db_connect
 
         $genderSql = "";
 
-        if ($gender != 3) {
+        if ($gender != 6) {
 
             $genderSql = " AND sex = {$gender}";
         }
@@ -242,19 +242,19 @@ class find extends db_connect
         return $result;
     }
 
-    public function start($queryText = '', $itemId = 0, $gender = 3, $online = 0, $photo = 0, $proMode = 0, $ageFrom = 18, $ageTo = 105, $sexOrientation = 0, $distance = 3000, $lat = "", $lng = "")
+    public function start($queryText = '', $itemId = 0, $gender = 6, $online = 0, $photo = 0, $proMode = 0, $ageFrom = 18, $ageTo = 105, $sexOrientation = 0, $distance = 3000, $lat = "", $lng = "")
     {
         $originQuery = $queryText;
-
+    
         if ($itemId == 0) {
-
             $itemId = 90000000;
             $itemId++;
         }
-
+    
+    
         $ageFrom = $ageFrom - 1;
         $ageTo = $ageTo + 1;
-
+    
         $result = array(
             "error" => false,
             "error_code" => ERROR_SUCCESS,
@@ -262,80 +262,91 @@ class find extends db_connect
             "query" => $originQuery,
             "items" => array()
         );
-
+    
         $origLat = $lat;
         $origLng = $lng;
         $dist = $distance; // This is the maximum distance (in miles) away from $origLat, $origLon in which to search
-
+    
         $endSql = " having distance < {$dist} ORDER BY regtime DESC LIMIT 20";
-
+    
         $genderSql = "";
-
-        if ($gender != 3) {
-
+    
+        if ($gender != 6) {
             $genderSql = " AND sex = {$gender}";
         }
-
+    
         $onlineSql = "";
-
+    
         if ($online > 0) {
-
             $current_time = time() - (15 * 60);
-
             $onlineSql = " AND last_authorize > {$current_time}";
         }
-
+    
         $photoSql = "";
-
+    
         if ($photo > 0) {
-
             $photoSql = " AND lowPhotoUrl <> ''";
         }
-
+    
         $proModeSql = "";
-
+    
         if ($proMode > 0) {
-
             $proModeSql = " AND pro != 0";
         }
-
+    
         $sexOrientationSql = "";
-
+    
         if ($sexOrientation > 0) {
-
             $sexOrientationSql = " AND sex_orientation = {$sexOrientation}";
         }
-
+    
         $dateSql = " AND u_age >= {$ageFrom} AND u_age <= {$ageTo}";
-
+    
         $queryText = "%".$queryText."%";
-
-        $sql = "SELECT id, regtime, lat, lng, 3956 * 2 *
-                    ASIN(SQRT( POWER(SIN(($origLat - lat)*pi()/180/2),2)
-                    +COS($origLat*pi()/180 )*COS(lat*pi()/180)
-                    *POWER(SIN(($origLng-lng)*pi()/180/2),2)))
-                    as distance  FROM users WHERE state = 0 AND (login LIKE '{$queryText}' OR fullname LIKE '{$queryText}' OR email LIKE '{$queryText}' OR country LIKE '{$queryText}') AND id < {$itemId}".$genderSql.$onlineSql.$photoSql.$proModeSql.$sexOrientationSql.$dateSql.$endSql;
-        $stmt = $this->db->prepare($sql);
-
+    
+          
+    $sql = "SELECT u.id, u.regtime, u.lat, u.lng, (3956 * 2 *
+        ASIN(SQRT( POWER(SIN(($origLat - u.lat)*pi()/180/2),2)
+        +COS($origLat*pi()/180 )*COS(u.lat*pi()/180)
+        *POWER(SIN(($origLng-u.lng)*pi()/180/2),2))))
+        as distance, 
+        (SELECT COUNT(*) FROM messages m
+         WHERE m.chatId = (SELECT c.id FROM chats c WHERE (c.toUserId = u.id AND c.fromUserId = :currentUserId) OR (c.fromUserId = u.id AND c.toUserId = :currentUserId) ORDER BY c.messageCreateAt DESC LIMIT 1)
+           AND m.fromUserId <> :currentUserId 
+           AND m.seenAt = 0) as unseenMessagesCount
+        FROM users u
+        WHERE u.state = 0 AND (u.login LIKE '{$queryText}' OR u.fullname LIKE '{$queryText}' OR u.email LIKE '{$queryText}' OR u.country LIKE '{$queryText}')
+        AND u.id < {$itemId}" . $genderSql . $onlineSql . $photoSql . $proModeSql . $sexOrientationSql . $dateSql . "
+        HAVING distance < {$dist}
+        ORDER BY distance ASC, regtime DESC";
+    
+    $stmt = $this->db->prepare($sql);
+    $stmt->bindParam(':currentUserId', $this->getRequestFrom(), PDO::PARAM_INT);
+    
+    
+    
         if ($stmt->execute()) {
-
+    
             if ($stmt->rowCount() > 0) {
-
+    
                 while ($row = $stmt->fetch()) {
-
+    
                     $profile = new profile($this->db, $row['id']);
                     $profile->setRequestFrom($this->getRequestFrom());
                     $profileInfo = $profile->getVeryShort();
+                   
+                    $profileInfo['unseenMessagesCount'] = $row['unseenMessagesCount'];
+               
                     $profileInfo['distance'] = round($this->getDistance($lat, $lng, $profileInfo['lat'], $profileInfo['lng']), 1);
                     unset($profile);
-
+    
                     array_push($result['items'], $profileInfo);
-
+    
                     $result['itemId'] = $row['id'];
                 }
             }
         }
-
+    
         return $result;
     }
 

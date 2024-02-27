@@ -18,7 +18,7 @@ if (!empty($_POST)) {
     $liked = isset($_POST['liked']) ? $_POST['liked'] : 1;
     $matches = isset($_POST['matches']) ? $_POST['matches'] : 1;
 
-    $sex = isset($_POST['sex']) ? $_POST['sex'] : 3; // 3 = any
+    $sex = isset($_POST['sex']) ? $_POST['sex'] : 6; // 3 = any
 
     $sex_orientation = isset($_POST['sex_orientation']) ? $_POST['sex_orientation'] : 0;
 
