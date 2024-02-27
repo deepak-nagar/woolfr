@@ -138,7 +138,7 @@
     $TEXT['label-location'] = "Location";
     $TEXT['label-facebook-link'] = "Facebook page";
     $TEXT['label-instagram-link'] = "Instagram page";
-    $TEXT['label-status'] = "Bio";
+    $TEXT['label-status'] = "About Me";
 
     $TEXT['label-error-404'] = "Requested page was not found.";
 
@@ -202,7 +202,7 @@
 
     $TEXT['label-username'] = "Username";
 
-    $TEXT['label-fullname'] = "Full name";
+    $TEXT['label-fullname'] = "Your Name";
 
     $TEXT['label-services'] = "Services";
 
@@ -455,7 +455,7 @@
     $TEXT['fb-linking'] = "Connect with Facebook";
 
 
-    $TEXT['label-gender'] = "Gender";
+    $TEXT['label-gender'] = "Looking For";
     $TEXT['label-birth-date'] = "Birth Date";
     $TEXT['label-join-date'] = "Join Date";
 
@@ -606,16 +606,26 @@
 
     // For version 3.5
 
-    $TEXT['label-sex-orientation'] = "Sexual Orientation";
+    $TEXT['label-sex-orientation'] = "Position";
     $TEXT['label-age'] = "Age";
     $TEXT['label-sex'] = "Sex";
     $TEXT['label-height'] = "Height";
     $TEXT['label-weight'] = "Weight";
     $TEXT['label-cm'] = "cm"; //centimeters
     $TEXT['label-kg'] = "kg"; //kilograms
+    $TEXT['label-all'] = "All";
+    $TEXT['label-top'] = "Top";
+    $TEXT['label-bottom'] = "Bottom";
+    $TEXT['label-versatile'] = "Versatile";
+    $TEXT['label-versTop'] = "Vers Top";
+    $TEXT['label-versBottom'] = "Vers Bottom";
+    $TEXT['label-side'] = "Side";
+    $TEXT['label-fetish'] = "Fetish";
+    $TEXT['label-nosex'] = "No Sex";
+
 
     $TEXT['label-select-gender'] = "Gender";
-    $TEXT['label-select-sex-orientation'] = "Sexual Orientation";
+    $TEXT['label-select-sex-orientation'] = "Position";
     $TEXT['label-select-age'] = "Age";
 
     $TEXT['msg-gender-incorrect'] = "Please select your gender";
@@ -666,12 +676,18 @@
 
     $TEXT['search-filters-show'] = "Show Search Filters";
     $TEXT['search-filters-hide'] = "Hide Search Filters";
-    $TEXT['search-filters-gender'] = "Gender";
+    $TEXT['search-filters-gender'] = "Looking For";
     $TEXT['search-filters-all'] = "All";
     $TEXT['search-filters-male'] = "Male";
     $TEXT['search-filters-female'] = "Female";
     $TEXT['search-filters-online'] = "Online";
     $TEXT['search-filters-active'] = "Last active";
+    $TEXT['search-filters-dating'] = "Dating";
+    $TEXT['search-filters-relationship'] = "Relationship";
+    $TEXT['search-filters-friends'] = "Friends";
+    $TEXT['search-filters-nsa'] = "Hookups/NSA";
+    $TEXT['search-filters-network'] = "Networking";
+    $TEXT['search-filters-chat'] = "Chat";
     $TEXT['search-filters-photo'] = "Photo";
     $TEXT['search-filters-photo-filter'] = "Only with Photo";
     $TEXT['search-filters-action-search'] = "Search";

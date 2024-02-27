@@ -34,8 +34,8 @@
     --button_secondary_hover_color: #f4f4f4 ;
     --button_secondary_text_color: #121212;
 
-  --button_disabled_color: rgba(0, 0, 0, 0.05) !important;
-  --button_disabled_hover_color: rgba(0, 0, 0, 0.13);
+  --button_disabled_color: #2f2f2f !important;
+  --button_disabled_hover_color: #fec200;
   --button_disabled_text_color: #0e0e10 !important;
 
   --button_more_color: #FEC200 !important;;
@@ -113,11 +113,11 @@
 
   --comment_bubble_background: #f2f2f2;
 
-  --ls_menu_item_color: #fe5764;
+  --ls_menu_item_color: #fec200;
   --ls_menu_selected_item_backround: #f0f2f5;
   --ls_menu_selected_item_color: #000000;
-  --ls_menu_selected_item_border_left_color: #fe5764;
-  --ls_menu_selected_item_border_bottom_color: #fe5764;
+  --ls_menu_selected_item_border_left_color: #fec200;
+  --ls_menu_selected_item_border_bottom_color: #fec200;
 
   --dropdown_menu_background: #f4f4f4;
   --dropdown_menu_color: var(--text_title);

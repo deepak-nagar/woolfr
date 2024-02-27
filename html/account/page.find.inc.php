@@ -224,11 +224,11 @@
 
                                 <input class="search-field" name="query" id="query" autocomplete="off" placeholder="<?php echo $LANG['search-box-placeholder']; ?>" type="text" autocorrect="off" autocapitalize="off" style="outline: none;" value="<?php echo $query; ?>">
 
-                                <button type="submit" class="button btn-main red search-submit"><i class="iconfont icofont-search-1"></i></button>
+                                <button type="submit" class="button btn-main yellow-btn  search-submit"><i class="iconfont icofont-search-1"></i></button>
 
                                 <div class="dropdown">
 
-                                    <button id="settings-button" type="" class="button btn-main red search-settings" data-toggle="dropdown"><i class="iconfont icofont-settings"></i></button>
+                                    <button id="settings-button" type="" class="button btn-main yellow-btn search-settings" data-toggle="dropdown"><i class="iconfont icofont-settings"></i></button>
 
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
 
@@ -246,14 +246,18 @@
 
                                                         <div class="search-filter-form-line">
                                                             <h5><?php echo $LANG['search-filters-gender']; ?></h5>
-                                                            <label class="search-filter-radio-button" for="gender-radio-1">
-                                                                <input type="radio" name="gender" id="gender-radio-1" value="3" <?php if ($u_gender == 3) echo "checked" ?>><?php echo $LANG['search-filters-all']; ?></label>
-                                                            <label class="search-filter-radio-button" for="gender-radio-2">
-                                                                <input type="radio" name="gender" id="gender-radio-2" value="0" <?php if ($u_gender == 0) echo "checked" ?>><?php echo $LANG['search-filters-male']; ?></label>
-                                                            <label class="search-filter-radio-button" for="gender-radio-3">
-                                                                <input type="radio" name="gender" id="gender-radio-3" value="1" <?php if ($u_gender == 1) echo "checked" ?>><?php echo $LANG['search-filters-female']; ?></label>
-                                                            <label class="search-filter-radio-button" for="gender-radio-4">
-                                                                <input type="radio" name="gender" id="gender-radio-4" value="2" <?php if ($u_gender == 2) echo "checked" ?>><?php echo $LANG['search-filters-secret']; ?></label>
+                                                             <label class="search-filter-radio-button" for="gender-radio-1">
+                                                                <input type="radio" name="gender" id="gender-radio-1" value="3" <?php if ($u_gender == 3) echo "checked" ?>><?php echo $LANG['search-filters-dating']; ?></label>
+                                                                <label class="search-filter-radio-button" for="gender-radio-4">
+                                                                <input type="radio" name="gender" id="gender-radio-4" value="2" <?php if ($u_gender == 2) echo "checked" ?>><?php echo $LANG['search-filters-relationship']; ?></label>
+                                                                <label class="search-filter-radio-button" for="gender-radio-4">
+                                                                <input type="radio" name="gender" id="gender-radio-4" value="2" <?php if ($u_gender == 2) echo "checked" ?>><?php echo $LANG['search-filters-friends']; ?></label>
+                                                                <label class="search-filter-radio-button" for="gender-radio-4">
+                                                                <input type="radio" name="gender" id="gender-radio-4" value="2" <?php if ($u_gender == 2) echo "checked" ?>><?php echo $LANG['search-filters-nsa']; ?></label>
+                                                                <label class="search-filter-radio-button" for="gender-radio-4">
+                                                                <input type="radio" name="gender" id="gender-radio-4" value="2" <?php if ($u_gender == 2) echo "checked" ?>><?php echo $LANG['search-filters-network']; ?></label>
+                                                                <label class="search-filter-radio-button" for="gender-radio-4">
+                                                                <input type="radio" name="gender" id="gender-radio-4" value="2" <?php if ($u_gender == 2) echo "checked" ?>><?php echo $LANG['search-filters-chat']; ?></label>
                                                         </div>
 
                                                         <div class="search-filter-form-line">
@@ -275,15 +279,23 @@
                                                         <div class="search-filter-form-line search-filter-form-box">
                                                             <h5><?php echo $LANG['label-sex-orientation']; ?></h5>
                                                             <label class="search-filter-radio-button" for="orientation-radio-0">
-                                                                <input type="radio" name="sex_orientation" id="orientation-radio-0" value="0" <?php if ($u_sex_orientation == 0) echo "checked" ?>><?php echo $LANG['search-filters-any']; ?></label>
+                                                                <input type="radio" name="sex_orientation" id="orientation-radio-0" value="0" <?php if ($u_sex_orientation == 0) echo "checked" ?>><?php echo $LANG['label-all']; ?></label>
                                                             <label class="search-filter-radio-button" for="orientation-radio-1">
-                                                                <input type="radio" name="sex_orientation" id="orientation-radio-1" value="1" <?php if ($u_sex_orientation == 1) echo "checked" ?>><?php echo $LANG['sex-orientation-1']; ?></label>
+                                                                <input type="radio" name="sex_orientation" id="orientation-radio-1" value="1" <?php if ($u_sex_orientation == 1) echo "checked" ?>><?php echo $LANG['label-top']; ?></label>
                                                             <label class="search-filter-radio-button" for="orientation-radio-2">
-                                                                <input type="radio" name="sex_orientation" id="orientation-radio-2" value="2" <?php if ($u_sex_orientation == 2) echo "checked" ?>><?php echo $LANG['sex-orientation-2']; ?></label>
+                                                                <input type="radio" name="sex_orientation" id="orientation-radio-2" value="2" <?php if ($u_sex_orientation == 2) echo "checked" ?>><?php echo $LANG['label-bottom']; ?></label>
                                                             <label class="search-filter-radio-button" for="orientation-radio-3">
-                                                                <input type="radio" name="sex_orientation" id="orientation-radio-3" value="3" <?php if ($u_sex_orientation == 3) echo "checked" ?>><?php echo $LANG['sex-orientation-3']; ?></label>
+                                                                <input type="radio" name="sex_orientation" id="orientation-radio-3" value="3" <?php if ($u_sex_orientation == 3) echo "checked" ?>><?php echo $LANG['label-versatile']; ?></label>
                                                             <label class="search-filter-radio-button" for="orientation-radio-4">
-                                                                <input type="radio" name="sex_orientation" id="orientation-radio-4" value="4" <?php if ($u_sex_orientation == 4) echo "checked" ?>><?php echo $LANG['sex-orientation-4']; ?></label>
+                                                                <input type="radio" name="sex_orientation" id="orientation-radio-4" value="4" <?php if ($u_sex_orientation == 4) echo "checked" ?>><?php echo $LANG['label-versTop']; ?></label>
+                                                                <label class="search-filter-radio-button" for="orientation-radio-4">
+                                                                <input type="radio" name="sex_orientation" id="orientation-radio-4" value="4" <?php if ($u_sex_orientation == 4) echo "checked" ?>><?php echo $LANG['label-versBottom']; ?></label>
+                                                                <label class="search-filter-radio-button" for="orientation-radio-4">
+                                                                <input type="radio" name="sex_orientation" id="orientation-radio-4" value="4" <?php if ($u_sex_orientation == 4) echo "checked" ?>><?php echo $LANG['label-side']; ?></label>
+                                                                <label class="search-filter-radio-button" for="orientation-radio-4">
+                                                                <input type="radio" name="sex_orientation" id="orientation-radio-4" value="4" <?php if ($u_sex_orientation == 4) echo "checked" ?>><?php echo $LANG['label-fetish']; ?></label>
+                                                                <label class="search-filter-radio-button" for="orientation-radio-4">
+                                                                <input type="radio" name="sex_orientation" id="orientation-radio-4" value="4" <?php if ($u_sex_orientation == 4) echo "checked" ?>><?php echo $LANG['label-nosex']; ?></label>
                                                         </div>
 
                                                         <div class="search-filter-form-line mt-3">

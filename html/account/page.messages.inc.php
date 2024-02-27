@@ -298,10 +298,14 @@
                                     <?php
                                 }
                             ?>
-
-                            <span class="card-action">
+                            <span class="card-message-status">
+                              <span class="card-status">
+                                <i class="iconfont icofont-ellipsis vertical-middle"></i>
+                              </span>
+                              <span class="card-action msg-hover">
                                 <a href="javascript:void(0)" onclick="Messages.removeChat('<?php echo $chat['id']; ?>', '<?php echo $chat['withUserId']; ?>'); return false;" class="card-act negative"><?php echo $LANG['action-remove']; ?></a>
                                 <a href="/account/chat?chat_id=<?php echo $chat['id']; ?>&user_id=<?php echo $chat['withUserId']; ?>" class="card-act active"><?php echo $LANG['action-go-to-conversation']; ?></a>
+                            </span>
                             </span>
                         </div>
                     </span>

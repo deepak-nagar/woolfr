@@ -376,6 +376,18 @@ body *:hover::-webkit-scrollbar-thumb {
   }
 }
 
+.yellow-btn {
+  background-color: #fec200;
+  color: #2f2f2f;
+}
+.yellow-btn:hover {
+  background-color: #faab00;
+}
+.msg-hover {
+  cursor: pointer;
+  display: hidden;
+}
+
 .standard-page h1,
 .standard-page h2,
 .standard-page h3,
@@ -753,21 +765,21 @@ input[type="button"].red,
 input[type="submit"].red,
 .button.red {
   color: #fff !important;
-  background-color: #fd5068;
+  background-color: #fec200;
 }
 
 button.red:focus,
 input[type="button"].red:focus,
 input[type="submit"].red:focus,
 .button.red:focus {
-  background-color: #e2485e;
+  background-color: #fec200;
 }
 
 button.red:hover,
 input[type="button"].red:hover,
 input[type="submit"].red:hover,
 .button.red:hover {
-  background-color: #e2485e;
+  background-color: #fec200;
 }
 
 /*  */
@@ -4067,7 +4079,7 @@ span.info-item-online {
   height: 39px;
   padding: 5px 16px;
   border-radius: 0 3px 3px 0px !important;
-  border-left: 1px solid #da4559;
+  border-left: 1px solid #fec200;
   outline: none;
   -webkit-appearance: none;
   -webkit-box-shadow: none;
@@ -4896,7 +4908,7 @@ span.cardview-img {
   left: calc(50% - 15px);
   top: calc(50% - 15px);
   position: absolute;
-  color: #457fcc;
+  color: #fec200;
   width: 30px;
   height: 30px;
   -webkit-animation: fa-spin 2s infinite linear;
@@ -5618,11 +5630,11 @@ td {
   top: 0;
   width: 20px;
   height: 20px;
-  background-color: #f76d9b;
-  background-image: -webkit-linear-gradient(top, #f76d9b 0%, #f76d9b 100%);
-  background-image: -o-linear-gradient(top, #f76d9b 0%, #f76d9b 100%);
-  background-image: linear-gradient(to bottom, #f76d9b 0%, #f76d9b 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F76D9B', endColorstr='#F76D9B', GradientType=0);
+  background-color: #fec200;
+  background-image: -webkit-linear-gradient(top, #fec200 0%, #fec200 100%);
+  background-image: -o-linear-gradient(top, #fec200 0%, #fec200 100%);
+  background-image: linear-gradient(to bottom, #fec200 0%, #fec200 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fec200', endColorstr='#fec200', GradientType=0);
   background-repeat: repeat-x;
   filter: none;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),
@@ -5681,12 +5693,12 @@ td {
 }
 
 .btn-hotgame-skip {
-  border: 2px solid #5890ff;
-  color: #5890ff;
+  border: 2px solid #fec200;
+  color: #fec200;
 }
 
 .btn-hotgame-skip:hover {
-  background: #5890ff;
+  background: #fec200;
   color: #fff;
 }
 

@@ -57,6 +57,7 @@
     color: #eee
 }
 
+
 @media (min-width:768px) {
     .card-profile .card-header {
         height: 9rem;
