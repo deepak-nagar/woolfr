@@ -298,15 +298,22 @@
                                     <?php
                                 }
                             ?>
-                            <span class="card-message-status">
+                            <div class="card-message-status">
                               <span class="card-status">
-                                <i class="iconfont icofont-ellipsis vertical-middle"></i>
+                               <span class="card-status-dots"></span>
+                               <span class="card-status-dots"></span>
+                               <span class="card-status-dots"></span>
                               </span>
-                              <span class="card-action msg-hover">
-                                <a href="javascript:void(0)" onclick="Messages.removeChat('<?php echo $chat['id']; ?>', '<?php echo $chat['withUserId']; ?>'); return false;" class="card-act negative"><?php echo $LANG['action-remove']; ?></a>
-                                <a href="/account/chat?chat_id=<?php echo $chat['id']; ?>&user_id=<?php echo $chat['withUserId']; ?>" class="card-act active"><?php echo $LANG['action-go-to-conversation']; ?></a>
-                            </span>
-                            </span>
+                              <div class="msg-hover  ">
+                                <div class="msg-hover-item">
+                                <a href="javascript:void(0)" onclick="Messages.removeChat('<?php echo $chat['id']; ?>', '<?php echo $chat['withUserId']; ?>'); return false;" class=" negative"><?php echo $LANG['action-remove']; ?></a>
+                                </div>
+                                <div class="msg-hover-item">
+                                <a href="/account/chat?chat_id=<?php echo $chat['id']; ?>&user_id=<?php echo $chat['withUserId']; ?>" class=" active"><?php echo $LANG['action-go-to-conversation']; ?></a>
+                                </div>
+                              
+                            </div>
+                            </div>
                         </div>
                     </span>
                 </div>

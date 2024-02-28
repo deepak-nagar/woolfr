@@ -385,9 +385,88 @@ body *:hover::-webkit-scrollbar-thumb {
 }
 .msg-hover {
   cursor: pointer;
-  display: hidden;
+  display: none !important;
+  position: absolute;
+  top:-15px;
+  right: 7px;
+  width: 150px;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  z-index: 999;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.msg-page-hover{
+  cursor: pointer;
+  display: none !important;
+  position: absolute;
+  top: 33px;
+  right: 0px;
+  width: 150px;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  z-index: 999;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.card-status-dots{
+  width: 6px;
+  height: 6px;
+  background-color: #2f2f2f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+.card-status{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  row-gap: 3px;
+  flex-direction: column;
+
+}
+.card-message-status{
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 999;
+}
+.card-message-status:hover .msg-hover {
+  display: block !important;
+}
+.msg-hover-item:hover{
+  background-color: #e4e4e4;
+  color: #faab00;
+}
+.msg-hover-item:hover a {
+  color: #faab00;
+}
+.msg-hover-item{
+  padding:3px 10px;
 }
 
+.card-page-status:hover .msg-page-hover {
+  display: block !important;
+}
+.card-top-section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.message-page{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+}
+
+.message-page .card-status-dots{
+  width: 4px !important;
+  height: 4px !important;
+}
 .standard-page h1,
 .standard-page h2,
 .standard-page h3,
@@ -2367,10 +2446,11 @@ body.sidebar-open {
 .user-verified-badge {
   color: white;
   text-align: center;
-  background: #5890ff;
-  width: 17pt;
-  height: 17pt;
-  border-radius: 17pt;
+  background: #2f2f2f;
+  width: 16pt;
+  height: 16pt;
+  border-radius: 16pt;
+  border: 1px solid #fff;
   font-size: 12pt;
   text-decoration: none;
   line-height: normal;

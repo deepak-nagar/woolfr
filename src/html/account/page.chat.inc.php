@@ -175,8 +175,27 @@
 
                     <div class="card main-content" style="max-width: 100%">
 
-                        <div class="card-header">
+                        <div class="card-header card-top-section">
                             <h3 class="card-title"><?php echo $user_info['fullname']; ?></h3>
+                            <div class="message-page">
+                                <i class="fa fa-lock" style="font-size: 22px ; color:#2f2f2f; cursor:pointer"></i>
+                              <span class="card-status card-page-status">
+                               <span class="card-status-dots"></span>
+                               <span class="card-status-dots"></span>
+                               <span class="card-status-dots"></span>
+                               <div class="msg-page-hover  ">
+                                <div class="msg-hover-item">
+                                <a href="javascript:void(0)" onclick="Messages.removeChat('<?php echo $chat['id']; ?>', '<?php echo $chat['withUserId']; ?>'); return false;" class=" negative"><?php echo $LANG['action-remove']; ?></a>
+                                </div>
+                                <div class="msg-hover-item">
+                                <a href="/account/chat?chat_id=<?php echo $chat['id']; ?>&user_id=<?php echo $chat['withUserId']; ?>" class=" active"><?php echo $LANG['action-go-to-conversation']; ?></a>
+                                </div>
+                              
+                            </div>
+                              </span>
+                           
+                              
+                            </div>
                         </div>
 
                         <div class="card-body standard-page p-2">
