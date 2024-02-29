@@ -505,7 +505,7 @@ body *:hover::-webkit-scrollbar-thumb {
 .standard-page iframe,
 .standard-page object {
   max-width: 100%;
-  height: auto;
+  max-height: auto;
 }
 
 .standard-page blockquote {
@@ -515,6 +515,10 @@ body *:hover::-webkit-scrollbar-thumb {
   line-height: 22px;
   background-color: #fafafa;
   color: rgba(62, 69, 81, 0.7);
+}
+
+.mr-1{
+  margin-right: 4px;
 }
 
 .standard-page blockquote *:first-child {
