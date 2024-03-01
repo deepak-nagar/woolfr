@@ -520,7 +520,42 @@ body *:hover::-webkit-scrollbar-thumb {
 .mr-1{
   margin-right: 4px;
 }
-
+.cardview-km {
+  position: absolute;
+  font-size: 10px;
+  top: 5px;
+  right: 5px;
+  color: white;
+}
+.cardview-online{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: #1ebe1b;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.cardview-offline{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: #FEC200;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.cardview-text{
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: #ff0000;
+  color: white;
+  font-size: 10px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
 .standard-page blockquote *:first-child {
   margin-top: 0;
 }

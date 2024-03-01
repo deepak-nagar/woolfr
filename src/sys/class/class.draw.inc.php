@@ -44,7 +44,18 @@ class draw extends db_connect
                         <span class="cardview-img" style="background-image: url('<?php echo $profilePhotoUrl; ?>')"></span>
                     </div>
                 </a>
+                  <div class="cardview-km">
+                    0.5km
+                  </div>
+                  <div class="cardview-online">
 
+                  </div>
+                  <div class="cardview-offline">
+
+</div>
+<div class="cardview-text">
+1
+</div>
 
 
                 <?php
@@ -58,6 +69,7 @@ class draw extends db_connect
                 } else {
 
                     ?>
+                    
                         <span class="card-counter black noselect cardview-item-badge" original-title="<?php echo $LANG['label-last-seen']; ?>"><?php echo $profile['timeAgo']; ?></span>
                     <?php
                 }
