@@ -387,7 +387,7 @@ body *:hover::-webkit-scrollbar-thumb {
   cursor: pointer;
   display: none !important;
   position: absolute;
-  top:-15px;
+  top: -15px;
   right: 7px;
   width: 150px;
   background-color: #f4f4f4;
@@ -396,7 +396,7 @@ body *:hover::-webkit-scrollbar-thumb {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-.msg-page-hover{
+.msg-page-hover {
   cursor: pointer;
   display: none !important;
   position: absolute;
@@ -409,7 +409,7 @@ body *:hover::-webkit-scrollbar-thumb {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-.card-status-dots{
+.card-status-dots {
   width: 6px;
   height: 6px;
   background-color: #2f2f2f;
@@ -417,15 +417,14 @@ body *:hover::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
 }
-.card-status{
+.card-status {
   display: flex;
   justify-content: center;
   align-items: center;
   row-gap: 3px;
   flex-direction: column;
-
 }
-.card-message-status{
+.card-message-status {
   position: absolute;
   top: 50%;
   right: 40px;
@@ -436,34 +435,34 @@ body *:hover::-webkit-scrollbar-thumb {
 .card-message-status:hover .msg-hover {
   display: block !important;
 }
-.msg-hover-item:hover{
+.msg-hover-item:hover {
   background-color: #e4e4e4;
   color: #faab00;
 }
 .msg-hover-item:hover a {
   color: #faab00;
 }
-.msg-hover-item{
-  padding:3px 10px;
+.msg-hover-item {
+  padding: 3px 10px;
 }
 
 .card-page-status:hover .msg-page-hover {
   display: block !important;
 }
-.card-top-section{
+.card-top-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.message-page{
+.message-page {
   display: flex;
   justify-content: end;
   align-items: center;
   gap: 20px;
 }
 
-.message-page .card-status-dots{
+.message-page .card-status-dots {
   width: 4px !important;
   height: 4px !important;
 }
@@ -517,7 +516,7 @@ body *:hover::-webkit-scrollbar-thumb {
   color: rgba(62, 69, 81, 0.7);
 }
 
-.mr-1{
+.mr-1 {
   margin-right: 4px;
 }
 .cardview-km {
@@ -527,7 +526,7 @@ body *:hover::-webkit-scrollbar-thumb {
   right: 5px;
   color: white;
 }
-.cardview-online{
+.cardview-online {
   position: absolute;
   top: 5px;
   left: 5px;
@@ -536,16 +535,16 @@ body *:hover::-webkit-scrollbar-thumb {
   height: 12px;
   border-radius: 50%;
 }
-.cardview-offline{
+.cardview-offline {
   position: absolute;
   top: 5px;
   left: 5px;
-  background-color: #FEC200;
+  background-color: #fec200;
   width: 12px;
   height: 12px;
   border-radius: 50%;
 }
-.cardview-text{
+.cardview-text {
   position: absolute;
   bottom: 5px;
   right: 5px;
@@ -5435,7 +5434,7 @@ td {
 
 .add-me-container .icon {
   left: calc(50% - 12px);
-  top: calc(50% - 12px);
+  top: calc(50% - 8px);
   position: absolute;
   width: 24px;
   height: 24px;
@@ -5446,7 +5445,27 @@ td {
   padding: 0;
   text-align: center;
 }
-
+.form-selectBox {
+  width: 100%;
+  padding: 11px 12px;
+}
+.push-notification-container {
+  width: 100%;
+}
+.push-notification-sideway {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.push-notification-sideway h6 {
+  font-size: 16px;
+  color: var(--text_title);
+}
+.push-notification-sideway:first {
+  margin-top: 0;
+}
 .add-me-container .icon i {
   padding-left: 1px;
 }

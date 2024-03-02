@@ -905,6 +905,8 @@
 
     $TEXT['page-deactivate-account'] = "Deactivate";
     $TEXT['page-blacklist'] = "Blacklist";
+ 
+    $TEXT['page-push-notification'] = "Push Notification";
 
     $TEXT['label-friends-sub-title-2'] = "Here you can see %s list of friends";
     $TEXT['label-likes-sub-title-2'] = "People who like %s";

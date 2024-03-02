@@ -131,6 +131,7 @@
                                         <a href="/account/settings/blacklist"><span class="tab"><?php echo $LANG['page-blacklist']; ?></span></a>
                                         <a href="/account/settings/otp"><span class="tab"><?php echo $LANG['page-otp']; ?></span></a>
                                         <a href="/account/settings/deactivation"><span class="tab active"><?php echo $LANG['page-deactivate-account']; ?></span></a>
+                                        <a href="/account/settings/pushnotification"><span class="tab"><?php echo $LANG['page-push-notification']; ?></span></a>
                                     </nav>
                                 </div>
 

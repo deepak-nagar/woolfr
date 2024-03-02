@@ -127,7 +127,6 @@
                             <?php echo $LANG['page-notifications-description']; ?>
                         </div>
                     </div>
-
                     <div class="content-list-page">
 
                         <?php

@@ -218,6 +218,7 @@
                                 <a href="/account/settings/blacklist"><span class="tab"><?php echo $LANG['page-blacklist']; ?></span></a>
                                 <a href="/account/settings/otp"><span class="tab"><?php echo $LANG['page-otp']; ?></span></a>
                                 <a href="/account/settings/deactivation"><span class="tab"><?php echo $LANG['page-deactivate-account']; ?></span></a>
+                                <a href="/account/settings/pushnotification"><span class="tab"><?php echo $LANG['page-push-notification']; ?></span></a>
                             </nav>
                         </div>
 
@@ -292,7 +293,12 @@
                                         </div>
 
                                         <div class="form-cell">
-                                            <input id="u_height" type="number" size="3" name="u_height" value="<?php echo $accountInfo['height']; ?>">
+                                            <!-- <input id="u_height" type="number" size="3" name="u_height" value="<?php echo $accountInfo['height']; ?>"> -->
+                                            <select class="form-selectBox">
+                                                <option value="">
+                                                    Height
+                                                </option>
+                                            </select>
                                         </div>
                                     </div>
 
@@ -302,7 +308,11 @@
                                         </div>
 
                                         <div class="form-cell">
-                                            <input id="u_weight" type="number" size="3" name="u_weight" value="<?php echo $accountInfo['weight']; ?>">
+                                            <!-- <input id="u_weight" type="number" size="3" name="u_weight" value="<?php echo $accountInfo['weight']; ?>"> -->
+                                            <select class="form-selectBox">
+                                                <option value="">
+                                                Weight                                                </option>
+                                            </select>
                                         </div>
                                     </div>
 
