@@ -3998,7 +3998,7 @@ span.info-item-online {
 
 .card-counter {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
   text-transform: uppercase;
   font-weight: 600;
@@ -4011,7 +4011,7 @@ span.info-item-online {
 
 .card-item .red,
 .cardview-item .red {
-  background-color: #fec200;
+  background-color: #da030e;
 }
 
 .card-item .green,
@@ -4398,10 +4398,11 @@ span.cardview-img {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin: 0;
-  padding: 0.7rem 0.7rem;
-  position: relative;
+  position: absolute  !important;
   display: flex !important;
   flex-direction: column !important;
+  bottom: 7px;
+  left: 7px;
 }
 
 .cardview-item-footer > :last-child {
@@ -4415,7 +4416,7 @@ span.cardview-img {
 .cardview .online-label {
   position: absolute;
   top: 7px;
-  right: 7px;
+  left: 7px;
   border: 1px solid rgba(251, 254, 255, 1);
   background: rgba(92, 220, 12, 0.7);
   border-radius: 50%;
@@ -4438,7 +4439,7 @@ span.cardview-img {
 }
 
 .cardview a.cardview-item-title {
-  color: var(--text_title);
+  color: #eeeeee;
   text-decoration: none;
   word-break: break-word;
 }
@@ -4449,14 +4450,14 @@ span.cardview-img {
 
 .cardview .card-counter {
   position: absolute;
-  top: 7px;
-  left: 7px;
-  right: auto;
+  bottom: 7px;
+  right: 7px;
+  left: auto;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 11px;
   opacity: 0.6;
-  color: var(--text_title);
+  color: #fff;
   padding: 5px 9px;
   border-radius: 30px;
   cursor: default;
@@ -4956,7 +4957,7 @@ span.cardview-img {
   height: 17px;
   line-height: 17px;
   border-radius: 3px;
-  color: #e58777;
+  color: #FEC200;
   display: inline-block;
   min-height: 13px;
   padding: 0 3px;

@@ -9,7 +9,7 @@
 
 session_start();
 
-error_reporting(E_ALL); // set to 0 when you resource is ready for all
+error_reporting(0); // set to 0 when you resource is ready for all
 
 define("APP_SIGNATURE", "raccoonsquare"); // Add signature constant to protect include modules
 

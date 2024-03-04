@@ -95,10 +95,15 @@ $B['SMTP_PASSWORD'] = 'password';                      //SMTP password
 
 //Please edit database data
 
-$C['DB_HOST'] = "db";                                //localhost or your db host
-$C['DB_USER'] = "root";                             //your db user
-$C['DB_PASS'] = "rootpassword";                         //your db password
-$C['DB_NAME'] = "woolfr";                             //your db name
+// $C['DB_HOST'] = "db";                                //localhost or your db host
+// $C['DB_USER'] = "root";                             //your db user
+// $C['DB_PASS'] = "rootpassword";                         //your db password
+// $C['DB_NAME'] = "woolfr";     
+
+$C['DB_HOST'] = "50.62.139.196";                                   //localhost or your db host
+$C['DB_USER'] = "techiefreight";                                 //your db user
+$C['DB_PASS'] = "NCviwkO_;Wfx";                         //your db password
+$C['DB_NAME'] = "techiefreight";                               //your db name
 
 $C['DEFAULT_BALANCE'] = 10;                                    // Default user balance in credits (Is charged during the user registration)
 
