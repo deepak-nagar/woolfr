@@ -410,8 +410,8 @@ body *:hover::-webkit-scrollbar-thumb {
   padding-bottom: 4px;
 }
 .card-status-dots {
-  width: 6px;
-  height: 6px;
+  width: 4px;
+  height: 4px;
   background-color: #2f2f2f;
   border-radius: 50%;
   display: flex;
@@ -1689,6 +1689,24 @@ body.sidebar-open {
   background-position: 0px 0px;
   background-size: cover;
 }
+
+
+.main-content-gender li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 7px;
+  column-gap: 10px;
+  width: 50%;
+}
+.main-content-gender li h5 {
+  font-size: 16px;
+  margin-bottom: 0px !important;
+}
+.main-content-gender li:first-child {
+  margin-top: 0px;
+}
+
 
 @media (max-width: 480px) {
   .profile_cover {
@@ -4398,7 +4416,7 @@ span.cardview-img {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin: 0;
-  position: absolute  !important;
+  position: absolute !important;
   display: flex !important;
   flex-direction: column !important;
   bottom: 7px;
@@ -4957,7 +4975,7 @@ span.cardview-img {
   height: 17px;
   line-height: 17px;
   border-radius: 3px;
-  color: #FEC200;
+  color: #fec200;
   display: inline-block;
   min-height: 13px;
   padding: 0 3px;

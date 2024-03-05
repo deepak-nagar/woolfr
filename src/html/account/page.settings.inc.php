@@ -347,18 +347,47 @@
                                     </div>
 
                                     <div class="link-preference form-row">
-                                        <div class="form-cell left">
+                                        <div class="form-cell left ">
                                             <h2><?php echo $LANG['label-gender']; ?></h2>
                                         </div>
 
                                         <div class="form-cell">
-                                            <div class="opt-in">
-                                                <select id="gender" name="gender" class="selectBox">
+                                                <!-- <select id="gender" name="gender" class="selectBox">
                                                     <option value="2" <?php if ($accountInfo['sex'] != SEX_FEMALE && $accountInfo['sex'] != SEX_MALE) echo "selected=\"selected\""; ?>><?php echo $LANG['gender-secret']; ?></option>
                                                     <option value="0" <?php if ($accountInfo['sex'] == SEX_MALE) echo "selected=\"selected\""; ?>><?php echo $LANG['gender-male']; ?></option>
                                                     <option value="1" <?php if ($accountInfo['sex'] == SEX_FEMALE) echo "selected=\"selected\""; ?>><?php echo $LANG['gender-female']; ?></option>
-                                                </select>
-                                            </div>
+                                                </select> -->
+                                                <ul class="main-content-gender">
+                                                    <li>
+                                                    <input type="checkbox" name="" value=""/>
+                                                <h5>Dating</h5>
+                                                    </li>
+                                                    <li>
+                                                    <input type="checkbox" name="" value=""/>
+                                                <h5>Realtionship</h5>
+                                                    </li>
+                                                    <li>
+                                                    <input type="checkbox" name="" value=""/>
+                                                <h5>Friends</h5>
+                                                    </li>
+                                                    <li>
+                                                    <input type="checkbox" name="" value=""/>
+                                                <h5>Hookups/NSA</h5>
+                                                    </li>
+                                                    <li>
+                                                    <input type="checkbox" name="" value=""/>
+                                                <h5>Networking</h5>
+                                                    </li>
+                                                    <li>
+                                                    <input type="checkbox" name="" value=""/>
+                                                <h5>Chat</h5>
+                                                    </li>
+                                                    </ul>
+                                                <div > 
+                                              
+                                                </div>
+                            
+                                                
                                         </div>
                                     </div>
 
