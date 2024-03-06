@@ -741,7 +741,7 @@ function drawChatItem($item, $current_chat_id, $LANG, $helper)
                                 <?php
                             }
                             ?>
-
+                                
                         </span>
                     </div>
                 </span>

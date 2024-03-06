@@ -521,7 +521,7 @@ body *:hover::-webkit-scrollbar-thumb {
 }
 .cardview-km {
   position: absolute;
-  font-size: 10px;
+  font-size: 12px;
   top: 5px;
   right: 5px;
   color: white;
@@ -534,6 +534,7 @@ body *:hover::-webkit-scrollbar-thumb {
   width: 12px;
   height: 12px;
   border-radius: 50%;
+  border: 1px solid #000;
 }
 .cardview-offline {
   position: absolute;
@@ -543,6 +544,7 @@ body *:hover::-webkit-scrollbar-thumb {
   width: 12px;
   height: 12px;
   border-radius: 50%;
+  border: 1px solid #000;
 }
 .cardview-text {
   position: absolute;
@@ -551,9 +553,13 @@ body *:hover::-webkit-scrollbar-thumb {
   background-color: #ff0000;
   color: white;
   font-size: 10px;
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 .standard-page blockquote *:first-child {
   margin-top: 0;
@@ -926,7 +932,7 @@ button.blue:disabled,
 button.green:disabled,
 button.red:disabled,
 button.yellow:disabled {
-  color: var(--button_disabled_text_color) !important;
+  color: var(---iconColor) !important;
   background-color: var(--button_disabled_hover_color);
 }
 
@@ -3899,6 +3905,7 @@ span.info-item-online {
 .message-item-right .card-content {
   padding-left: 0;
   padding-right: 65px;
+  position: relative;
 }
 
 .message-item-right a.card-body,
@@ -3915,12 +3922,14 @@ span.info-item-online {
   margin-top: 0 !important;
   max-width: none;
   display: inline-block !important;
-  padding: 5px !important;
-  background: var(--comment_bubble_background);
+  padding-top: 7px  !important;
   word-wrap: normal;
   word-break: break-word;
   white-space: normal !important;
-  border-radius: 3px;
+  border-radius: 4px;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  padding-bottom: 19px !important;
 }
 
 .message-item .post-img {
@@ -3990,8 +3999,28 @@ span.info-item-online {
   overflow: hidden;
   white-space: nowrap;
   color: #666;
-}
+  position: absolute !important;
+  bottom: 4px !important;
+  right: 4px !important;
 
+}
+.message-item-right .card-date{
+bottom: 0px !important;
+}
+.card-message-not-sent{
+  font-size: 12px;
+  position: absolute !important;
+  bottom: -10px !important;
+  right: 65px !important;
+  color: #da030e !important;
+}
+.chat-item .card-status-text{
+  background-color:  transparent !important;
+}
+.chat-item .card-date{
+  bottom: -11px !important;
+  right: 40px !important;
+}
 .card-location {
   display: block;
   font-size: 12px;
@@ -4032,10 +4061,10 @@ span.info-item-online {
   background-color: #da030e;
 }
 
-.card-item .green,
+/* .card-item .green,
 .cardview-item .green {
   background-color: #64bc36;
-}
+} */
 
 .card-item .black,
 .cardview-item .black {
@@ -4433,13 +4462,13 @@ span.cardview-img {
 
 .cardview .online-label {
   position: absolute;
-  top: 7px;
-  left: 7px;
-  border: 1px solid rgba(251, 254, 255, 1);
-  background: rgba(92, 220, 12, 0.7);
+  top: 5px;
+  left: 5px;
+  border: 1px solid #000;
+  background: #1ebe1b;
   border-radius: 50%;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   vertical-align: middle;
 }
 
@@ -4460,8 +4489,30 @@ span.cardview-img {
   color: #eeeeee;
   text-decoration: none;
   word-break: break-word;
+  width: 90px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flow;
+
+}
+.message-item-right{
+  margin-left: auto !important;
+}
+.message-item{
+  width: 55%;
+  display: flex;
+  justify-content: flex-end;
 }
 
+.message-item-right .card-status-text{
+  background-color: #ff9000 !important;
+  position:  relative !important;
+}
+
+.card-status-text{
+ background-color: var(--main_page_background) !important;
+}
 .cardview a.cardview-item-title:hover {
   text-decoration: underline;
 }
@@ -4542,6 +4593,9 @@ span.cardview-img {
   background-size: cover;
   background-position: center center;
   background-image: var(--header_logo);
+  aspect-ratio: 3/2;
+  mix-blend-mode: color-burn;
+  object-fit: contain;
 }
 
 .top-header .logo-img {
@@ -5441,6 +5495,11 @@ td {
 
 .spotlight .cardview a.cardview-item-title {
   font-size: 12px;
+  width: 33px;
+  display: flow;
+  overflow: hidden;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
 }
 
 .spotlight .add-me-container {

@@ -602,7 +602,7 @@
 
     // For version 3.4
 
-    $TEXT['label-seen'] = "seen";
+    $TEXT['label-seen'] = "Seen";
 
     // For version 3.5
 

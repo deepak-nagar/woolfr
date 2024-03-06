@@ -62,15 +62,15 @@ class draw extends db_connect
 
                 if ($profile['friendUserOnline']) {
 
-                    ?>
-                        <i class="online-label"></i>
+                    // ?>
+                    //     <i class="online-label"></i>
                     <?php
 
                 } else {
 
                     ?>
                     
-                        <span class="card-counter black noselect cardview-item-badge" original-title="<?php echo $LANG['label-last-seen']; ?>"><?php echo $profile['timeAgo']; ?></span>
+                        <!-- <span class="card-counter black noselect cardview-item-badge" original-title="<?php echo $LANG['label-last-seen']; ?>"><?php echo $profile['timeAgo']; ?></span> -->
                     <?php
                 }
                 ?>
@@ -84,9 +84,9 @@ class draw extends db_connect
                             if ($profile['friendUserVerify']) {
 
                                 ?>
-                                    <span title="<?php echo $LANG['label-account-verified']; ?>" class="verified">
+                                    <!-- <span title="<?php echo $LANG['label-account-verified']; ?>" class="verified">
                                         <i class="iconfont icofont-check-alt"></i>
-                                    </span>
+                                    </span> -->
                                 <?php
                             }
                         ?>
@@ -95,7 +95,7 @@ class draw extends db_connect
                         if (strlen($profile['friendLocation']) > 0) {
 
                             ?>
-                                <div class="gray-text"><?php echo $profile['friendLocation']; ?></div>
+                                <!-- <div class="gray-text"><?php echo $profile['friendLocation']; ?></div> -->
                             <?php
                         }
                     ?>
@@ -132,14 +132,14 @@ class draw extends db_connect
                 </a>
 
 
-                <span class="card-counter black noselect cardview-item-badge" original-title="<?php echo $LANG['label-last-visit']; ?>"><?php echo $profile['timeAgo']; ?></span>
+                <!-- <span class="card-counter black noselect cardview-item-badge" original-title="<?php echo $LANG['label-last-visit']; ?>"><?php echo $profile['timeAgo']; ?></span> -->
 
                 <?php
 
                     if ($profile['guestUserOnline']) {
 
                         ?>
-                            <i class="online-label"></i>
+                            <!-- <i class="online-label"></i> -->
                         <?php
                     }
                 ?>
@@ -153,9 +153,9 @@ class draw extends db_connect
                         if ($profile['guestUserVerify']) {
 
                             ?>
-                                <span title="<?php echo $LANG['label-account-verified']; ?>" class="verified">
+                                <!-- <span title="<?php echo $LANG['label-account-verified']; ?>" class="verified">
                                     <i class="iconfont icofont-check-alt"></i>
-                                </span>
+                                </span> -->
                             <?php
                         }
                         ?>
@@ -164,7 +164,7 @@ class draw extends db_connect
                     if (strlen($profile['guestUserLocation']) > 0) {
 
                         ?>
-                        <div class="gray-text"><?php echo $profile['guestUserLocation']; ?></div>
+                        <!-- <div class="gray-text"><?php echo $profile['guestUserLocation']; ?></div> -->
                         <?php
                     }
                     ?>
@@ -362,16 +362,26 @@ class draw extends db_connect
                                     }
 
                                     ?>
-
+<span class="card-date">
+    <?php echo $time->timeAgo($message['createAt']); ?>
+    <?php if ($seen): ?>
+        <span class="time green" data-my-id="<?php echo $LANG['']; ?>">
+            &#10003;&#10003; 
+        </span>
+    <?php else: ?>
+        <span class="time green" style="display: none;" data-my-id="<?php echo $LANG['']; ?>">
+            &#10003; 
+        </span>
+    <?php endif; ?>
+</span>
                                     </span>
                             <?php
                         }
                         ?>
 
-                        <span class="card-date">
-                            <?php echo $time->timeAgo($message['createAt']); ?>
-                            <span class="time green" style="<?php if (!$seen) echo 'display: none'; ?>" data-my-id="<?php echo $LANG['label-seen']; ?>"><?php echo $LANG['label-seen']; ?></span>
-                        </span>
+                       <span class="card-message-not-sent">
+                        Message not sent  <i class="fas fa-times"></i>
+                       </span>
 
                     </div>
                 </span>
@@ -425,9 +435,9 @@ class draw extends db_connect
                             if ($profile['verify']) {
 
                                 ?>
-                                <span title="<?php echo $LANG['label-account-verified']; ?>" class="verified">
+                                <!-- <span title="<?php echo $LANG['label-account-verified']; ?>" class="verified">
                                     <i class="iconfont icofont-check-alt"></i>
-                                </span>
+                                </span> -->
                                 <?php
                             }
                         ?>
@@ -436,7 +446,7 @@ class draw extends db_connect
                         if (strlen($profile['location']) > 0) {
 
                             ?>
-                                <div class="gray-text"><?php echo $profile['location']; ?></div>
+                                <!-- <div class="gray-text"><?php echo $profile['location']; ?></div> -->
                             <?php
                         }
                     ?>
