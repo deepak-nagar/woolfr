@@ -154,7 +154,7 @@ class msg extends db_connect
         return $chatId;
     }
 
-    public function create($toUserId, $chatId,  $message = "", $imgUrl = "", $chatFromUserId = 0, $chatToUserId = 0, $listId = 0, $stickerId = 0, $stickerImgUrl = "", $videoUrl = "", $videoImgUrl = "", $lat = "", $lng = "")
+    public function create($toUserId, $chatId,  $message = "", $imgUrl = "", $chatFromUserId = 0, $chatToUserId = 0, $listId = 0, $stickerId = 0, $stickerImgUrl = "", $videoUrl = "", $videoImgUrl = "", $lat = "", $lng = "",$expiryImage = 0)
     {
         $result = array(
             "error" => true,
@@ -208,7 +208,7 @@ class msg extends db_connect
         $ip_addr = helper::ip_addr();
         $u_agent = helper::u_agent();
 
-        $stmt = $this->db->prepare("INSERT INTO messages (chatId, fromUserId, toUserId, message, imgUrl, videoUrl, videoImgUrl, stickerId, stickerImgUrl, createAt, ip_addr, u_agent, lat, lng) value (:chatId, :fromUserId, :toUserId, :message, :imgUrl, :videoUrl, :videoImgUrl, :stickerId, :stickerImgUrl, :createAt, :ip_addr, :u_agent, :lat, :lng)");
+        $stmt = $this->db->prepare("INSERT INTO messages (chatId, fromUserId, toUserId, message, imgUrl, videoUrl, videoImgUrl, stickerId, stickerImgUrl, createAt, ip_addr, u_agent, lat, lng,expiryImage) value (:chatId, :fromUserId, :toUserId, :message, :imgUrl, :videoUrl, :videoImgUrl, :stickerId, :stickerImgUrl, :createAt, :ip_addr, :u_agent, :lat, :lng, :expiryImage)");
         $stmt->bindParam(":chatId", $chatId, PDO::PARAM_INT);
         $stmt->bindParam(":fromUserId", $this->requestFrom, PDO::PARAM_INT);
         $stmt->bindParam(":toUserId", $toUserId, PDO::PARAM_INT);
@@ -223,7 +223,8 @@ class msg extends db_connect
         $stmt->bindParam(":u_agent", $u_agent, PDO::PARAM_STR);
         $stmt->bindParam(":lat", $lat, PDO::PARAM_STR);
         $stmt->bindParam(":lng", $lng, PDO::PARAM_STR);
-
+        $stmt->bindParam(":expiryImage", $expiryImage, PDO::PARAM_INT);
+        
         if ($stmt->execute()) {
 
             $msgId = $this->db->lastInsertId();
@@ -265,6 +266,7 @@ class msg extends db_connect
                             "stickerImgUrl" => $stickerImgUrl,
                             "lat" =>$lat,
                             "lng" =>$lng,
+                            "expiryImage" =>$expiryImage,
                             "createAt" => $currentTime,
                             "seenAt" => 0,
                             "date" => date("Y-m-d H:i:s", $currentTime),
@@ -1009,6 +1011,7 @@ class msg extends db_connect
                                  "timeAgo" => $time->timeAgo($row['createAt']),
                                  "lat"=>$row['lat'],
                                  "lng"=>$row['lng'],
+                                 "expiryImage" =>$row['expiryImage'],
                                  "removeAt" => $row['removeAt']);
 
                 array_push($messages['messages'], $msgInfo);
