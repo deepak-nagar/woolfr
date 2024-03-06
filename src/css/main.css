@@ -385,9 +385,87 @@ body *:hover::-webkit-scrollbar-thumb {
 }
 .msg-hover {
   cursor: pointer;
-  display: hidden;
+  display: none !important;
+  position: absolute;
+  top: -15px;
+  right: 7px;
+  width: 150px;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  z-index: 999;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.msg-page-hover {
+  cursor: pointer;
+  display: none !important;
+  position: absolute;
+  top: 33px;
+  right: 0px;
+  width: 150px;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  z-index: 999;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.card-status-dots {
+  width: 4px;
+  height: 4px;
+  background-color: #2f2f2f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+.card-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  row-gap: 3px;
+  flex-direction: column;
+}
+.card-message-status {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 999;
+}
+.card-message-status:hover .msg-hover {
+  display: block !important;
+}
+.msg-hover-item:hover {
+  background-color: #e4e4e4;
+  color: #faab00;
+}
+.msg-hover-item:hover a {
+  color: #faab00;
+}
+.msg-hover-item {
+  padding: 3px 10px;
 }
 
+.card-page-status:hover .msg-page-hover {
+  display: block !important;
+}
+.card-top-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.message-page {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+}
+
+.message-page .card-status-dots {
+  width: 4px !important;
+  height: 4px !important;
+}
 .standard-page h1,
 .standard-page h2,
 .standard-page h3,
@@ -426,7 +504,7 @@ body *:hover::-webkit-scrollbar-thumb {
 .standard-page iframe,
 .standard-page object {
   max-width: 100%;
-  height: auto;
+  max-height: auto;
 }
 
 .standard-page blockquote {
@@ -438,6 +516,51 @@ body *:hover::-webkit-scrollbar-thumb {
   color: rgba(62, 69, 81, 0.7);
 }
 
+.mr-1 {
+  margin-right: 4px;
+}
+.cardview-km {
+  position: absolute;
+  font-size: 12px;
+  top: 5px;
+  right: 5px;
+  color: white;
+}
+.cardview-online {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: #1ebe1b;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+.cardview-offline {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: #fec200;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+.cardview-text {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: #ff0000;
+  color: white;
+  font-size: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 .standard-page blockquote *:first-child {
   margin-top: 0;
 }
@@ -809,7 +932,7 @@ button.blue:disabled,
 button.green:disabled,
 button.red:disabled,
 button.yellow:disabled {
-  color: var(--button_disabled_text_color) !important;
+  color: var(---iconColor) !important;
   background-color: var(--button_disabled_hover_color);
 }
 
@@ -1572,6 +1695,24 @@ body.sidebar-open {
   background-position: 0px 0px;
   background-size: cover;
 }
+
+
+.main-content-gender li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 7px;
+  column-gap: 10px;
+  width: 50%;
+}
+.main-content-gender li h5 {
+  font-size: 16px;
+  margin-bottom: 0px !important;
+}
+.main-content-gender li:first-child {
+  margin-top: 0px;
+}
+
 
 @media (max-width: 480px) {
   .profile_cover {
@@ -2367,10 +2508,11 @@ body.sidebar-open {
 .user-verified-badge {
   color: white;
   text-align: center;
-  background: #5890ff;
-  width: 17pt;
-  height: 17pt;
-  border-radius: 17pt;
+  background: #2f2f2f;
+  width: 16pt;
+  height: 16pt;
+  border-radius: 16pt;
+  border: 1px solid #fff;
   font-size: 12pt;
   text-decoration: none;
   line-height: normal;
@@ -3763,6 +3905,7 @@ span.info-item-online {
 .message-item-right .card-content {
   padding-left: 0;
   padding-right: 65px;
+  position: relative;
 }
 
 .message-item-right a.card-body,
@@ -3779,12 +3922,14 @@ span.info-item-online {
   margin-top: 0 !important;
   max-width: none;
   display: inline-block !important;
-  padding: 5px !important;
-  background: var(--comment_bubble_background);
+  padding-top: 7px  !important;
   word-wrap: normal;
   word-break: break-word;
   white-space: normal !important;
-  border-radius: 3px;
+  border-radius: 4px;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  padding-bottom: 19px !important;
 }
 
 .message-item .post-img {
@@ -3854,8 +3999,28 @@ span.info-item-online {
   overflow: hidden;
   white-space: nowrap;
   color: #666;
-}
+  position: absolute !important;
+  bottom: 4px !important;
+  right: 4px !important;
 
+}
+.message-item-right .card-date{
+bottom: 0px !important;
+}
+.card-message-not-sent{
+  font-size: 12px;
+  position: absolute !important;
+  bottom: -10px !important;
+  right: 65px !important;
+  color: #da030e !important;
+}
+.chat-item .card-status-text{
+  background-color:  transparent !important;
+}
+.chat-item .card-date{
+  bottom: -11px !important;
+  right: 40px !important;
+}
 .card-location {
   display: block;
   font-size: 12px;
@@ -3880,7 +4045,7 @@ span.info-item-online {
 
 .card-counter {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
   text-transform: uppercase;
   font-weight: 600;
@@ -3893,13 +4058,13 @@ span.info-item-online {
 
 .card-item .red,
 .cardview-item .red {
-  background-color: #fec200;
+  background-color: #da030e;
 }
 
-.card-item .green,
+/* .card-item .green,
 .cardview-item .green {
   background-color: #64bc36;
-}
+} */
 
 .card-item .black,
 .cardview-item .black {
@@ -4280,10 +4445,11 @@ span.cardview-img {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin: 0;
-  padding: 0.7rem 0.7rem;
-  position: relative;
+  position: absolute !important;
   display: flex !important;
   flex-direction: column !important;
+  bottom: 7px;
+  left: 7px;
 }
 
 .cardview-item-footer > :last-child {
@@ -4296,13 +4462,13 @@ span.cardview-img {
 
 .cardview .online-label {
   position: absolute;
-  top: 7px;
-  right: 7px;
-  border: 1px solid rgba(251, 254, 255, 1);
-  background: rgba(92, 220, 12, 0.7);
+  top: 5px;
+  left: 5px;
+  border: 1px solid #000;
+  background: #1ebe1b;
   border-radius: 50%;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   vertical-align: middle;
 }
 
@@ -4320,25 +4486,47 @@ span.cardview-img {
 }
 
 .cardview a.cardview-item-title {
-  color: var(--text_title);
+  color: #eeeeee;
   text-decoration: none;
   word-break: break-word;
+  width: 90px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flow;
+
+}
+.message-item-right{
+  margin-left: auto !important;
+}
+.message-item{
+  width: 55%;
+  display: flex;
+  justify-content: flex-end;
 }
 
+.message-item-right .card-status-text{
+  background-color: #ff9000 !important;
+  position:  relative !important;
+}
+
+.card-status-text{
+ background-color: var(--main_page_background) !important;
+}
 .cardview a.cardview-item-title:hover {
   text-decoration: underline;
 }
 
 .cardview .card-counter {
   position: absolute;
-  top: 7px;
-  left: 7px;
-  right: auto;
+  bottom: 7px;
+  right: 7px;
+  left: auto;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 11px;
   opacity: 0.6;
-  color: var(--text_title);
+  color: #fff;
   padding: 5px 9px;
   border-radius: 30px;
   cursor: default;
@@ -4405,6 +4593,9 @@ span.cardview-img {
   background-size: cover;
   background-position: center center;
   background-image: var(--header_logo);
+  aspect-ratio: 3/2;
+  mix-blend-mode: color-burn;
+  object-fit: contain;
 }
 
 .top-header .logo-img {
@@ -4838,7 +5029,7 @@ span.cardview-img {
   height: 17px;
   line-height: 17px;
   border-radius: 3px;
-  color: #e58777;
+  color: #fec200;
   display: inline-block;
   min-height: 13px;
   padding: 0 3px;
@@ -5304,6 +5495,11 @@ td {
 
 .spotlight .cardview a.cardview-item-title {
   font-size: 12px;
+  width: 33px;
+  display: flow;
+  overflow: hidden;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
 }
 
 .spotlight .add-me-container {
@@ -5316,7 +5512,7 @@ td {
 
 .add-me-container .icon {
   left: calc(50% - 12px);
-  top: calc(50% - 12px);
+  top: calc(50% - 8px);
   position: absolute;
   width: 24px;
   height: 24px;
@@ -5327,7 +5523,27 @@ td {
   padding: 0;
   text-align: center;
 }
-
+.form-selectBox {
+  width: 100%;
+  padding: 11px 12px;
+}
+.push-notification-container {
+  width: 100%;
+}
+.push-notification-sideway {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.push-notification-sideway h6 {
+  font-size: 16px;
+  color: var(--text_title);
+}
+.push-notification-sideway:first {
+  margin-top: 0;
+}
 .add-me-container .icon i {
   padding-left: 1px;
 }

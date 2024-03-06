@@ -12,7 +12,7 @@
   --header_border_bottom: 1px solid #ececec;
   --header_logo: url(/img/logo.png);
   --header_logo_height: 40px;
-  --header_logo_width: 110px;
+  --header_logo_width: 162px;
   --header_burger_background: #686868;
   --header_button_text_color: #fec200;
   --header_button_hover_background_color: #faab00;
@@ -36,7 +36,7 @@
 
   --button_disabled_color: #2f2f2f !important;
   --button_disabled_hover_color: #fec200;
-  --button_disabled_text_color: #0e0e10 !important;
+  --button_disabled_text_color: #e4e4e4 !important;
 
   --button_more_color: #FEC200 !important;;
   --button_more_hover_color: #FAAB00;
