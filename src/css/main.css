@@ -3792,6 +3792,7 @@ span.info-item-online {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  border: 1px solid #000;
 }
 
 .card-pro-icon {
@@ -4397,18 +4398,17 @@ ul.collection p {
 
 .cardview .card-body {
   padding: 0;
-  box-shadow: var(--common_page_shadow);
   position: relative;
   margin-bottom: 1.5rem;
   width: 100%;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: var(--common_page_background);
   background-clip: border-box;
-  border-radius: var(--common_page_border_radius);
   display: flex;
   flex: 1 1 auto;
+  max-height: 218px;
+   height: fit-content !important;
 }
 
 .cardview .cardview-item .user-photo {

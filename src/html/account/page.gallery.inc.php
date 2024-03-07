@@ -532,8 +532,9 @@
                     $("#item-video-upload").trigger('always');
                 }
             });
+ 
 
-            function update_ui() {
+function update_ui() {
 
                 $item_actions.removeClass('hidden');
 
