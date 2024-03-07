@@ -32,6 +32,7 @@ if (!empty($_POST)) {
     $messageImg = isset($_POST['messageImg']) ? $_POST['messageImg'] : "";
 
     $listId = isset($_POST['listId']) ? $_POST['listId'] : 0;
+    $expiryImage = isset($_POST['expiryImage']) ? $_POST['expiryImage'] : 0;
 
     $stickerId = isset($_POST['stickerId']) ? $_POST['stickerId'] : 0;
     $stickerImgUrl = isset($_POST['stickerImgUrl']) ? $_POST['stickerImgUrl'] : "";
@@ -111,7 +112,7 @@ if (!empty($_POST)) {
         $messages = new msg($dbo);
         $messages->setRequestFrom($accountId);
 
-        $result = $messages->create($profileId, $chatId, $messageText, $messageImg, $chatFromUserId, $chatToUserId, $listId, $stickerId, $stickerImgUrl, $videoUrl, $videoImgUrl,$lat,$lng);
+        $result = $messages->create($profileId, $chatId, $messageText, $messageImg, $chatFromUserId, $chatToUserId, $listId, $stickerId, $stickerImgUrl, $videoUrl, $videoImgUrl,$lat,$lng,$expiryImage);
     }
 
     echo json_encode($result);

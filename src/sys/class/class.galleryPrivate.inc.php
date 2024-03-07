@@ -686,6 +686,21 @@ class galleryPrivate extends db_connect
         return $result;
     }
 
+    public function removeProfilePic($userId)
+{
+    $result = array("error" => true, "error_code" => ERROR_UNKNOWN);
+
+    $stmt = $this->db->prepare("UPDATE users SET lowPhotoUrl = NULL, originPhotoUrl = NULL, normalPhotoUrl = NULL, bigPhotoUrl = NULL WHERE id = :userId");
+    $stmt->bindParam(":userId", $userId, PDO::PARAM_INT);
+
+    if ($stmt->execute()) {
+        $result = array("error" => false, "error_code" => ERROR_SUCCESS);
+    }
+
+    return $result;
+}
+
+
     public function setLanguage($language)
     {
         $this->language = $language;
