@@ -133,9 +133,16 @@ $C['ENABLE_MESSAGES_GCM'] = 1;
 $C['DISABLE_GIFTS_GCM'] = 0;
 $C['ENABLE_GIFTS_GCM'] = 1;
 
-$C['SEX_MALE'] = 0;
-$C['SEX_FEMALE'] = 1;
-$C['SEX_ANY'] = 2;
+// $C['SEX_MALE'] = 0;
+// $C['SEX_FEMALE'] = 1;
+// $C['SEX_ANY'] = 2;
+$C['DATING'] = 0;
+$C['RELATIONSHIP'] = 1;
+$C['FRIENDS'] = 2;
+$C['HOOKUPS_NSA'] = 3;
+$C['NETWORKING'] = 4;
+$C['CHAT'] = 5;
+$C['OTHER'] = 6;
 
 $C['USER_CREATED_SUCCESSFULLY'] = 0;
 $C['USER_CREATE_FAILED'] = 1;

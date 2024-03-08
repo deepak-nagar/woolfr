@@ -7,6 +7,9 @@
  * Copyright 2012-2023 Demyanchuk Dmitry (racconsquare@gmail.com)
  */
 
+ error_reporting(E_ALL);
+ ini_set('display_errors', 1);
+
 class account extends db_connect
 {
     private $id = 0;
@@ -1760,6 +1763,58 @@ class account extends db_connect
 
         return $time;
     }
+
+    public function getWeightDropDown()
+    {
+        try {
+            $stmt = $this->db->prepare("SELECT * FROM WeightOptions");
+            if ($stmt->execute()) {
+                // Fetch all rows as an associative array
+                $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                
+                // Check if any rows were returned
+                if ($rows) {
+                    return $rows; // Return all rows
+                } else {
+                    return []; // Return an empty array if no rows found
+                }
+            } else {
+                // Handle execution failure
+                return []; // Return an empty array in case of failure
+            }
+        } catch (PDOException $e) {
+            // Handle PDOException
+            error_log("PDOException in getWeight(): " . $e->getMessage());
+            return []; // Return an empty array in case of exception
+        }
+    }
+    
+    public function getHeightDropDown()
+    {
+        try {
+            $stmt = $this->db->prepare("SELECT * FROM HeightOptions");
+            if ($stmt->execute()) {
+                // Fetch all rows as an associative array
+                $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                
+                // Check if any rows were returned
+                if ($rows) {
+                    return $rows; // Return all rows
+                } else {
+                    return []; // Return an empty array if no rows found
+                }
+            } else {
+                // Handle execution failure
+                return []; // Return an empty array in case of failure
+            }
+        } catch (PDOException $e) {
+            // Handle PDOException
+            error_log("PDOException in getHeight(): " . $e->getMessage());
+            return []; // Return an empty array in case of exception
+        }
+    }
+    
+
 
     public function get()
     {

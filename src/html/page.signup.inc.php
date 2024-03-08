@@ -457,11 +457,43 @@
                         </div>
 
                         <div class="opt-in">
-                            <select name="gender" id="gender" style="margin-bottom: 15px; width: 100%">
-                                <option value="2" <?php if ($gender != SEX_FEMALE && $gender != SEX_MALE) echo "selected=\"selected\""; ?>><?php echo $LANG['gender-secret']; ?></option>
-                                <option value="0" <?php if ($gender == SEX_MALE) echo "selected=\"selected\""; ?>><?php echo $LANG['gender-male']; ?></option>
-                                <option value="1" <?php if ($gender == SEX_FEMALE) echo "selected=\"selected\""; ?>><?php echo $LANG['gender-female']; ?></option>
-                            </select>
+                    
+                            <div class="form-looking-for">
+                            <div class=" ">
+                                            <h6><?php echo $LANG['label-gender']; ?></h6>
+                                        </div>
+                                        <ul class="main-content-gender">
+                                                        <li>
+                                                            <input type="checkbox" name="dating" value="0" <?php if ($gender == DATING) echo "checked"; ?> />
+                                                            <h5>Dating</h5>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" name="relationship" value="1" <?php if ($gender == RELATIONSHIP) echo "checked"; ?> />
+                                                            <h5>Relationship</h5>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" name="friends" value="2" <?php if ($gender == FRIENDS) echo "checked"; ?> />
+                                                            <h5>Friends</h5>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" name="hookups" value="3" <?php if ($gender == HOOKUPS_NSA) echo "checked"; ?> />
+                                                            <h5>Hookups/NSA</h5>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" name="networking" value="4" <?php if ($gender == NETWORKING) echo "checked"; ?> />
+                                                            <h5>Networking</h5>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" name="chat" value="5" <?php if ($gender == CHAT) echo "checked"; ?> />
+                                                            <h5>Chat</h5>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" name="other" value="6" <?php if ($gender == OTHER) echo "checked"; ?> />
+                                                            <h5>Other</h5>
+                                                        </li>
+                                                </ul>
+                            </div>
+                           
                         </div>
 
                         <div class="opt-in">

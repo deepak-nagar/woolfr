@@ -515,6 +515,14 @@ body *:hover::-webkit-scrollbar-thumb {
   background-color: #fafafa;
   color: rgba(62, 69, 81, 0.7);
 }
+.form-looking-for{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.form-looking-for h6 , .form-looking-for .main-content-gender  li h5{
+  font-weight: 400;
+}
 
 .mr-1 {
   margin-right: 4px;

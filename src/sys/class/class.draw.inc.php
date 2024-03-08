@@ -52,18 +52,17 @@ class draw extends db_connect
                   </div>
                   <div class="cardview-offline">
 
-</div>
-<div class="cardview-text">
-1
-</div>
-
+                    </div>
+                    <div class="cardview-text">
+                    1
+                    </div>
 
                 <?php
 
                 if ($profile['friendUserOnline']) {
 
-                    // ?>
-                    //     <i class="online-label"></i>
+                    ?>
+                       <i class="online-label"></i>
                     <?php
 
                 } else {

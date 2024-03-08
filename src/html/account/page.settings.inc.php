@@ -171,6 +171,9 @@
     $account->setLastActive();
 
     $accountInfo = $account->get();
+    $weightInfo = $account->getWeightDropDown();
+    $heightInfo = $account->getHeightDropDown();
+
 
     auth::newAuthenticityToken();
 
@@ -294,115 +297,17 @@
 
                                         <div class="form-cell">
                                             <!-- <input id="u_height" type="number" size="3" name="u_height" value="<?php echo $accountInfo['height']; ?>"> -->
-                                            <select class="form-selectBox">
-                                                <option value="" disabled>
-                                                  Choose  Height
-                                                </option>
-                                                <option value="" >
-                                                4'5" (1.37m)
-                                                </option>
-                                                <option value="" >
-                                                4'6" (1.40m)
-                                                </option>
-                                                <option value="" >
-                                                4'7" (1.43m)
-                                                </option>
-                                                <option value="" >
-                                                4'8" (1.46m)
-                                                </option>
-                                                <option value="" >
-                                                4'9" (1.49m)
-                                                </option>
-                                                <option value="" >
-                                                5'0" (1.52m)
-                                                </option>
-                                                <option value="" >
-                                                5'1" (1.55m)
-                                                </option>
-                                                <option value="" >
-                                                5'2" (1.58m)
-                                                </option>
-                                                <option value="" >
-                                                5'3" (1.61m)
-                                                </option>
-                                                <option value="" >
-                                                5'4" (1.64m)
-                                                </option>
-                                                <option value="" >
-                                                5'5" (1.67m)
-                                                </option>
-                                                <option value="" >
-                                                5'6" (1.70m)
-                                                </option>
-                                                <option value="" >
-                                                5'7" (1.73m)
-                                                </option>
-                                                <option value="" >
-                                                5'8" (1.76m)
-                                                </option>
-                                                <option value="" >
-                                                5'9" (1.79m)
-                                                </option>
-                                                <option value="" >
-                                                6'0" (1.82m)
-                                                </option>
-                                                <option value="" >
-                                                6'1" (1.85m)
-                                                </option>
-                                                <option value="" >
-                                                6'2" (1.88m)
-                                                </option>
-                                                <option value="" >
-                                                6'3" (1.91m)
-                                                </option>
-                                                <option value="" >
-                                                6'4" (1.94m)
-                                                </option>
-                                                <option value="" >
-                                                6'5" (1.97m)
-                                                </option>
-                                                <option value="" >
-                                                6'6" (2.00m)
-                                                </option>
-                                                <option value="" >
-                                                6'7" (2.03m)    
-                                                </option>
-                                                <option value="" >
-                                                6'8" (2.06m)
-                                                </option>
-                                                <option value="" >
-                                                6'9" (2.09m)
-                                                </option>
-                                                <option value="" >
-                                                7'0" (2.12m)
-                                                </option>
-                                                <option value="" >
-                                                7'1" (2.15m)
-                                                </option>
-                                                <option value="" >
-                                                7'2" (2.18m)
-                                                </option>
-                                                <option value="" >
-                                                7'3" (2.21m)
-                                                </option>
-                                                <option value="" >
-                                                    7'4" (2.24m)
-                                                </option>
-                                                <option value="" >
-                                                    7'5" (2.27m)
-                                                </option>
-                                                <option value="" >
-                                                    7'6" (2.30m)
-                                                </option>
-                                                <option value="" >
-                                                    7'7" (2.33m)
-                                                </option>
-                                                <option value="" >
-                                                    7'8" (2.36m)
-                                                </option>
+                                            <?php
+                                                     echo '<select class="form-selectBox">';
+                                                    echo '<option value="" disabled>Choose Height</option>';
 
+                                                    foreach ($heightInfo as $option) {
+                                                        $height = $option['height_value'];
+                                                        $description = $option['height_description'];
+                                                        echo "<option value=''>$height ($description)</option>";
+                                                    }
 
-                                            </select>
+                                                    echo '</select>'; ?>
                                         </div>
                                     </div>
 
@@ -413,205 +318,19 @@
 
                                         <div class="form-cell">
                                             <!-- <input id="u_weight" type="number" size="3" name="u_weight" value="<?php echo $accountInfo['weight']; ?>"> -->
-                                            <select class="form-selectBox">
-                                                <option value="" disabled>
-                                               Choose  Weight                                               
-                                             </option>
-                                                <option value="" >
-                                                90lb (41kg)
-                                                </option>
-                                                <option value="" >
-                                                95lb (43kg)
-                                                </option>
-                                                <option value="" >
-                                                    100lb (45kg)
-                                                </option>
-                                                <option value="" >
-                                                    105lb (48kg)
-                                                </option>
-                                                <option value="" >
-                                                    110lb (50kg)
-                                                </option>
-                                                <option value="" >
-                                                    115lb (52kg)
-                                                </option>
-                                                <option value="" >
-                                                    120lb (54kg)
-                                                </option>
-                                                <option value="" >
-                                                125lb (57kg)
-                                                </option>
-                                                <option value="" >
-                                                130lb (59kg)
-                                                </option>
-                                                <option value="" >
-                                                   135lb (61kg)
-                                                </option>
-                                                <option value="" >
-                                                    140lb (64kg)
-                                                </option>
-                                                <option value="" >
-                                                    145lb (66kg)
-                                                </option>
-                                                <option value="" >
-                                                    150lb (68kg)
-                                                </option>
-                                                <option value="" >
-                                                    155lb (70kg)
-                                                </option>
-                                                <option value="" >
-                                                    160lb (73kg)
-                                                </option>
-                                                <option value="" >
-                                                    165lb (75kg)
-                                                </option>
+                                            <?php
+                                            echo '<select class="form-selectBox">';
+                                                echo '<option value="" disabled>Choose Weight</option>';
 
-                                                <option value="" >
-                                                    170lb (77kg)
-                                                </option>
-                                                <option value="" >
-                                                    175lb (79kg)
-                                                </option>
-                                                <option value="" >
-                                                    180lb (82kg)
-                                                </option>
-                                                <option value="" >
-                                                    185lb (84kg)
-                                                </option>
-                                                <option value="" >
-                                                    190lb (86kg)
-                                                </option>
-                                                <option value="" >
-                                                    195lb (88kg)
-                                                </option>
-                                                <option value="" >
-                                                    200lb (91kg)
-                                                </option>
-                                                <option value="" >
-                                                    205lb (93kg)
-                                                </option>
-                                                <option value="" >
-                                                    210lb (95kg)
-                                                </option>
-                                                <option value="" >
-                                                    215lb (98kg)
-                                                </option>
-                                                <option value="" >
-                                                    220lb (100kg)
-                                                </option>
-                                                <option value="" >
-                                                    225lb (102kg)
-                                                </option>
-                                                <option value="" >
-                                                    230lb (104kg)
-                                                </option>
-                                                <option value="" >
-                                                    235lb (107kg)
-                                                </option>
-                                                <option value="" >
-                                                    240lb (109kg)
-                                                </option>
-                                                <option value="" >
-                                                    245lb (111kg)
-                                                </option>
-                                                <option value="" >
-                                                    250lb (113kg)
-                                                </option>
-                                                <option value="" >
-                                                    255lb (116kg)
-                                                </option>
-                                                <option value="" >
-                                                    260lb (118kg)
-                                                </option>
-                                                <option value="" >
-                                                    265lb (120kg)
-                                                </option>
-                                                <option value="" >
-                                                    270lb (122kg)
-                                                </option>
-                                                <option value="" >
-                                                    275lb (125kg)
-                                                </option>
-                                                <option value="" >
-                                                    280lb (127kg)
-                                                </option>
-                                                <option value="" >
-                                                    285lb (129kg)
-                                                </option>
-                                                <option value="" >
-                                                    290lb (132kg)
-                                                </option>
-                                                <option value="" >
-                                                    295lb (134kg)
-                                                </option>
-                                                <option value="" >
-                                                    300lb (136kg)
-                                                </option>
-                                                <option value="" >
-                                                    305lb (138kg)
-                                                </option>
-                                                <option value="" >
-                                                    310lb (141kg)
-                                                </option>
-                                                <option value="" >
-                                                    315lb (143kg)
-                                                </option>
-                                                <option value="" >
-                                                    320lb (145kg)
-                                                </option>
-                                                <option value="" >
-                                                    325lb (148kg)
-                                                </option>
-                                                <option value="" >
-                                                    330lb (150kg)
-                                                </option>
-                                                <option value="" >
-                                                    335lb (152kg)
-                                                </option>
-                                                <option value="" >
-                                                    340lb (154kg)
-                                                </option>
-                                                <option value="" >
-                                                    345lb (156kg)
-                                                </option>
-                                                <option value="" >
-                                                    350lb (159kg)
-                                                </option>
-                                                <option value="" >
-                                                    355lb (161kg)
-                                                </option>
-                                                <option value="" >
-                                                    360lb (163kg)
-                                                </option>
-                                                <option value="" >
-                                                    365lb (166kg)
-                                                </option>
-                                                <option value="" >
-                                                    370lb (168kg)
-                                                    </option>
+                                                // Loop through weight options and generate options dynamically
+                                                foreach ($weightInfo as $option) {
+                                                    $weight = $option['weight_value'];
+                                                    $description = $option['weight_description'];
+                                                    echo "<option value=''>$weight ($description)</option>";
+                                                }
 
-                                                    <option value="" >
-                                                        375lb (170kg)
-                                                    </option>
-                                                    <option value="" >
-                                                        380lb (172kg)
-                                                    </option>
-                                                    <option value="" >
-                                                        385lb (175kg)
-                                                    </option>
-                                                    <option value="" >
-                                                        390lb (177kg)
-                                                    </option>
-                                                    <option value="" >
-                                                        395lb (179kg)
-                                                    </option>
-                                                    <option value="" >
-                                                        400lb (181kg)
-                                                    </option>
-
-
-
-                                            </select>
+                                                // End select element
+                                                echo '</select>'; ?>
                                         </div>
                                     </div>
 
@@ -651,42 +370,36 @@
                                         </div>
 
                                         <div class="form-cell">
-                                                <!-- <select id="gender" name="gender" class="selectBox">
-                                                    <option value="2" <?php if ($accountInfo['sex'] != SEX_FEMALE && $accountInfo['sex'] != SEX_MALE) echo "selected=\"selected\""; ?>><?php echo $LANG['gender-secret']; ?></option>
-                                                    <option value="0" <?php if ($accountInfo['sex'] == SEX_MALE) echo "selected=\"selected\""; ?>><?php echo $LANG['gender-male']; ?></option>
-                                                    <option value="1" <?php if ($accountInfo['sex'] == SEX_FEMALE) echo "selected=\"selected\""; ?>><?php echo $LANG['gender-female']; ?></option>
-                                                </select> -->
                                                 <ul class="main-content-gender">
-                                                    <li>
-                                                    <input type="checkbox" name="" value=""/>
-                                                <h5>Dating</h5>
-                                                    </li>
-                                                    <li>
-                                                    <input type="checkbox" name="" value=""/>
-                                                <h5>Realtionship</h5>
-                                                    </li>
-                                                    <li>
-                                                    <input type="checkbox" name="" value=""/>
-                                                <h5>Friends</h5>
-                                                    </li>
-                                                    <li>
-                                                    <input type="checkbox" name="" value=""/>
-                                                <h5>Hookups/NSA</h5>
-                                                    </li>
-                                                    <li>
-                                                    <input type="checkbox" name="" value=""/>
-                                                <h5>Networking</h5>
-                                                    </li>
-                                                    <li>
-                                                    <input type="checkbox" name="" value=""/>
-                                                <h5>Chat</h5>
-                                                    </li>
-                                                    </ul>
-                                                <div > 
-                                              
-                                                </div>
-                            
-                                                
+                                                        <li>
+                                                            <input type="checkbox" name="dating" value="0" <?php if ($accountInfo['sex'] == DATING) echo "checked"; ?> />
+                                                            <h5>Dating</h5>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" name="relationship" value="1" <?php if ($accountInfo['sex'] == RELATIONSHIP) echo "checked"; ?> />
+                                                            <h5>Relationship</h5>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" name="friends" value="2" <?php if ($accountInfo['sex'] == FRIENDS) echo "checked"; ?> />
+                                                            <h5>Friends</h5>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" name="hookups" value="3" <?php if ($accountInfo['sex'] == HOOKUPS_NSA) echo "checked"; ?> />
+                                                            <h5>Hookups/NSA</h5>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" name="networking" value="4" <?php if ($accountInfo['sex'] == NETWORKING) echo "checked"; ?> />
+                                                            <h5>Networking</h5>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" name="chat" value="5" <?php if ($accountInfo['sex'] == CHAT) echo "checked"; ?> />
+                                                            <h5>Chat</h5>
+                                                        </li>
+                                                        <li>
+                                                            <input type="checkbox" name="other" value="6" <?php if ($accountInfo['sex'] == OTHER) echo "checked"; ?> />
+                                                            <h5>Other</h5>
+                                                        </li>
+                                                </ul>
                                         </div>
                                     </div>
 
