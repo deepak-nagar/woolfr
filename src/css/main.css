@@ -515,12 +515,13 @@ body *:hover::-webkit-scrollbar-thumb {
   background-color: #fafafa;
   color: rgba(62, 69, 81, 0.7);
 }
-.form-looking-for{
+.form-looking-for {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-.form-looking-for h6 , .form-looking-for .main-content-gender  li h5{
+.form-looking-for h6,
+.form-looking-for .main-content-gender li h5 {
   font-weight: 400;
 }
 
@@ -567,7 +568,6 @@ body *:hover::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 .standard-page blockquote *:first-child {
   margin-top: 0;
@@ -1704,7 +1704,6 @@ body.sidebar-open {
   background-size: cover;
 }
 
-
 .main-content-gender li {
   display: flex;
   justify-content: flex-start;
@@ -1720,7 +1719,6 @@ body.sidebar-open {
 .main-content-gender li:first-child {
   margin-top: 0px;
 }
-
 
 @media (max-width: 480px) {
   .profile_cover {
@@ -3931,7 +3929,7 @@ span.info-item-online {
   margin-top: 0 !important;
   max-width: none;
   display: inline-block !important;
-  padding-top: 7px  !important;
+  padding-top: 7px !important;
   word-wrap: normal;
   word-break: break-word;
   white-space: normal !important;
@@ -4011,22 +4009,21 @@ span.info-item-online {
   position: absolute !important;
   bottom: 4px !important;
   right: 4px !important;
-
 }
-.message-item-right .card-date{
-bottom: 0px !important;
+.message-item-right .card-date {
+  bottom: 0px !important;
 }
-.card-message-not-sent{
+.card-message-not-sent {
   font-size: 12px;
   position: absolute !important;
   bottom: -10px !important;
   right: 65px !important;
   color: #da030e !important;
 }
-.chat-item .card-status-text{
-  background-color:  transparent !important;
+.chat-item .card-status-text {
+  background-color: transparent !important;
 }
-.chat-item .card-date{
+.chat-item .card-date {
   bottom: -11px !important;
   right: 40px !important;
 }
@@ -4416,7 +4413,7 @@ ul.collection p {
   display: flex;
   flex: 1 1 auto;
   max-height: 218px;
-   height: fit-content !important;
+  height: fit-content !important;
 }
 
 .cardview .cardview-item .user-photo {
@@ -4502,24 +4499,23 @@ span.cardview-img {
   overflow: hidden;
   text-overflow: ellipsis;
   display: flow;
-
 }
-.message-item-right{
+.message-item-right {
   margin-left: auto !important;
 }
-.message-item{
+.message-item {
   width: 55%;
   display: flex;
   justify-content: flex-end;
 }
 
-.message-item-right .card-status-text{
+.message-item-right .card-status-text {
   background-color: #ff9000 !important;
-  position:  relative !important;
+  position: relative !important;
 }
 
-.card-status-text{
- background-color: var(--main_page_background) !important;
+.card-status-text {
+  background-color: var(--main_page_background) !important;
 }
 .cardview a.cardview-item-title:hover {
   text-decoration: underline;
@@ -5214,14 +5210,15 @@ span.cardview-img {
 }
 
 .gallery-item-preview span.video-play {
-  width: 70px;
-  height: 70px;
-  margin: -35px 0 0 -35px;
+  width: 56px;
+  height: 56px;
+  margin: -32px 0 0 -29px;
   position: absolute !important;
   left: 50%;
   top: 50%;
   border: 0;
-  background-image: url(/img/video_play.png?x=2);
+  background-image: url(../img/video_play.svg?x2);
+  background-size: cover;
 }
 
 .gallery-item-preview .info-badge {

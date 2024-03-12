@@ -9,15 +9,14 @@
 
 session_start();
 
-error_reporting(0); // set to 0 when you resource is ready for all
+error_reporting(0); 
 
-define("APP_SIGNATURE", "raccoonsquare"); // Add signature constant to protect include modules
+define("APP_SIGNATURE", "raccoonsquare"); 
 
 include_once("sys/core/init.inc.php");
 
 $page_id = '';
 
-// Auto authorize if installed cookie
 
 if (!auth::isSession() && isset($_COOKIE['user_name']) && isset($_COOKIE['user_password'])) {
 

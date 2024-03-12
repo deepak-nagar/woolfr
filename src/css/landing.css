@@ -25,8 +25,6 @@
     text-transform: uppercase;
 }
 
-/*==================================================================
-[ Size ]*/
 .size1 {
     width: 355px;
     max-width: 100%;
@@ -35,10 +33,6 @@
 .size2 {
     width: calc(100% - 43px);
 }
-
-
-/*//////////////////////////////////////////////////////////////////
-[ login ]*/
 
 .home {
     background-image: url(/img/love_bg.png);
@@ -101,8 +95,6 @@ margin: 0 auto;
     width: 100%;
 }
 
-/*==================================================================
-[ login more ]*/
 .login100-more {
     width: 55%;
     background-repeat: no-repeat;
@@ -138,7 +130,6 @@ margin: 0 auto;
     top: 0;
 }
 
-
 .login100_content h1 {
     font-size: 32px;
     margin-top: 0;
@@ -162,11 +153,6 @@ margin: 0 auto;
     left: 0;
     background: rgba(0,0,0,0.3);
 }
-
-
-
-/*==================================================================
-[ Form ]*/
 
 .login100-form {
     width: 45%;
@@ -205,9 +191,6 @@ margin: 0 auto;
 }
 
 
-/*------------------------------------------------------------------
-[ Responsive ]*/
-
 @media (max-width: 992px) {
     .login100-form {
         width: 60%;
@@ -245,8 +228,6 @@ margin: 0 auto;
     }
 }
 
-
-/* Preview profiles */
 
 .wrap-landing-info-container {
 
