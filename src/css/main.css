@@ -5051,9 +5051,9 @@ span.cardview-img {
 .main-menu .item-icon {
   height: 20px;
   margin: 4px 6px 4px -24px;
-  position: relative;
   width: 22px;
   float: left;
+  position: relative;
 }
 
 .main-menu .item-icon .img {
